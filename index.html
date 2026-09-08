@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erdaş Big Bag | Endüstriyel Ambalaj & Çuval Çözümleri</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===================================================
+       ERDAŞ BİG BAG - UNIFIED STYLESHEET
+       =================================================== */
+    :root {
+      --bg-main: #f8fafc;
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --primary-blue: #0284c7;
+      --dark-navy: #0b1329;
+      --accent-green: #10b981;
+      --border-color: #e2e8f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* الشريط العلوي */
+    .top-bar {
+      background-color: var(--dark-navy);
+      color: #cbd5e1;
+      padding: 10px 0;
+      font-size: 14px;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .top-bar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .top-info i {
+      color: var(--primary-blue);
+    }
+
+    .badge {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lang-switch button {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .lang-switch button.active {
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    /* الهيدر واللوغو العلوي */
+    .main-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .nav-content {
+      height: 85px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    /* مقاس وضبط اللوغو الأزرق في الهيدر */
+    .header-logo-img {
+      height: 52px;
+      max-width: 220px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-blue);
+    }
+
+    .nav-btn {
+      background: var(--dark-navy) !important;
+      color: #ffffff !important;
+      padding: 10px 22px;
+      border-radius: 10px;
+      transition: background-color 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: #1e293b !important;
+    }
+
+    /* واجهة البداية Hero */
+    .hero-section {
+      padding: 70px 0;
+      border-bottom: 1px solid var(--border-color);
+      background: linear-gradient(180deg, #f0f7ff 0%, #f8fafc 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .tag {
+      background: #e0f2fe;
+      color: var(--primary-blue);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 25px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--primary-blue);
+      color: #ffffff;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.92;
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--text-dark);
+      border: 2px solid var(--border-color);
+    }
+
+    .hero-image-box {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-image-box img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .image-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(11, 19, 41, 0.85);
+      color: #ffffff;
+      padding: 14px 20px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* المنتجات */
+    .products-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .sub-title {
+      color: var(--primary-blue);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      font-weight: 900;
+      margin-top: 6px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--bg-main);
+      border: 2px solid var(--border-color);
+      padding: 30px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .featured-card {
+      border-color: var(--primary-blue);
+      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.1);
+    }
+
+    .card-badge {
+      font-size: 12px;
+      font-weight: 700;
+      background: #e2e8f0;
+      padding: 4px 10px;
+      border-radius: 6px;
+      align-self: flex-start;
+      margin-bottom: 15px;
+    }
+
+    .featured-badge {
+      background: var(--primary-blue);
+      color: #ffffff;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .specs-list {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .specs-list li {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .specs-list i {
+      color: var(--accent-green);
+      margin-right: 8px;
+    }
+
+    .card-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: var(--dark-navy);
+      color: #ffffff;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    /* قسم الطلب والفورم */
+    .form-section {
+      padding: 80px 0;
+      background: var(--dark-navy);
+      color: #ffffff;
+    }
+
+    .form-container {
+      max-width: 750px;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .form-header h2 {
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    .form-header p {
+      color: #94a3b8;
+      font-size: 16px;
+      margin-top: 8px;
+    }
+
+    .custom-form {
+      background: #16203a;
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid #233154;
+    }
+
+    .input-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #cbd5e1;
+      margin-bottom: 8px;
+    }
+
+    .form-group select,
+    .form-group input {
+      width: 100%;
+      padding: 14px;
+      background: #0b1329;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    .channel-selection {
+      margin: 25px 0;
+      border-top: 1px solid #233154;
+      padding-top: 20px;
+    }
+
+    .channel-title {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #cbd5e1;
+      margin-bottom: 12px;
+    }
+
+    .radio-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .radio-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px;
+      background: #0b1329;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .icon-green { color: var(--accent-green); font-size: 20px; }
+    .icon-blue { color: var(--primary-blue); font-size: 20px; }
+
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--accent-green);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: opacity 0.2s;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.92;
+    }
+
+    /* الفوتر واللوغو الأبيض */
+    .main-footer {
+      background: #060b18;
+      color: #94a3b8;
+      padding: 60px 0 20px;
+      border-top: 1px solid #1e293b;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    /* مقاس وضبط اللوغو الأبيض في الفوتر */
+    .footer-logo-img {
+      height: 48px;
+      max-width: 200px;
+      object-fit: contain;
+    }
+
+    .footer-about {
+      font-size: 15px;
+      margin-top: 15px;
+      max-width: 320px;
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+
+    .footer-contact p {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-contact i {
+      color: var(--primary-blue);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #1e293b;
+      padding-top: 20px;
+      font-size: 14px;
+    }
+
+    /* تجاوب الشاشات الصغيرة */
+    @media (max-width: 850px) {
+      .hero-grid,
+      .cards-grid,
+      .footer-grid,
+      .input-grid,
+      .radio-group {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero-text h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الشريط العلوي واللغة -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <span><i class="fa-solid fa-location-dot"></i> Gebze / Kocaeli, Türkiye</span>
+        <span class="badge" data-tr="Doğrudan Üretici Fabrika" data-en="Direct Manufacturer">Doğrudan Üretici Fabrika</span>
+      </div>
+      <div class="lang-switch">
+        <i class="fa-solid fa-globe"></i>
+        <button id="btn-tr" class="active" onclick="setLanguage('tr')">TR</button>
+        <span>|</span>
+        <button id="btn-en" onclick="setLanguage('en')">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- الهيدر الرئيسي: اللوغو الأزرق على اليسار -->
+  <header class="main-header">
+    <div class="container nav-content">
+      
+      <!-- ============================================== -->
+      <!-- مكان اللوغو الأزرق (للخلفية البيضاء في الهيدر) -->
+      <!-- استبدل "logo-blue.png" باسم ملف الشعار الأزرق لديك -->
+      <!-- ============================================== -->
+      <a href="#" class="brand-logo">
+        <img src="logo.png" alt="Erdaş Big Bag" class="header-logo-img" />
+      </a>
+
+      <nav class="nav-links">
+        <a href="#urunler" data-tr="Ürünlerimiz" data-en="Products">Ürünlerimiz</a>
+        <a href="#teklif" class="nav-btn" data-tr="Fiyat Teklifi Al" data-en="Get a Quote">Fiyat Teklifi Al</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- القسم الترويجي Hero -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="tag" data-tr="İhracat Kalitesinde İmalat" data-en="Export Quality Manufacturing">İhracat Kalitesinde İmalat</span>
+        <h1 data-tr="Ağır Yükler İçin Güçlü & Dayanıklı Big Bag" data-en="Strong & Durable Big Bags For Heavy Loads">
+          Ağır Yükler İçin Güçlü & Dayanıklı Big Bag
+        </h1>
+        <p class="hero-desc" data-tr="Gebze tesislerimizde 500 kg ile 2000 kg taşıma kapasiteli, maden, kimya ve tarım sektörlerine özel yüksek mukavemetli çuval üretimi." data-en="Heavy-duty bulk bag manufacturing in Gebze from 500 kg up to 2000 kg safe loads for mining, chemical, and agro sectors.">
+          Gebze tesislerimizde 500 kg ile 2000 kg taşıma kapasiteli, maden, kimya ve tarım sektörlerine özel yüksek mukavemetli çuval üretimi.
+        </p>
+        <div class="hero-actions">
+          <a href="#teklif" class="btn btn-primary" data-tr="Hemen Teklif Al" data-en="Request Instant Quote">
+            <i class="fa-solid fa-calculator"></i> <span data-tr="Hemen Teklif Al" data-en="Request Instant Quote">Hemen Teklif Al</span>
+          </a>
+          <a href="#urunler" class="btn btn-secondary" data-tr="Ürünleri İncele" data-en="View Products">Ürünleri İncele</a>
+        </div>
+      </div>
+
+      <div class="hero-image-box">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Erdaş Big Bag" />
+        <div class="image-label">
+          <span data-tr="Yüksek Mukavemetli Sanayi Çuvalları" data-en="High Durability Industrial Sacks">Yüksek Mukavemetli Sanayi Çuvalları</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- المنتجات -->
+  <section id="urunler" class="products-section">
+    <div class="container">
+      <div class="section-title">
+        <span class="sub-title" data-tr="Katalog" data-en="Catalog">Katalog</span>
+        <h2 data-tr="Endüstriyel Çuval Modellerimiz" data-en="Our Bulk Bag Models">Endüstriyel Çuval Modellerimiz</h2>
+      </div>
+
+      <div class="cards-grid">
+        <!-- كرت 1 -->
+        <div class="card">
+          <span class="card-badge" data-tr="Standart Model" data-en="Standard Model">Standart Model</span>
+          <h3 data-tr="4 Kulplu Standart Big Bag" data-en="4-Loop Standard Big Bag">4 Kulplu Standart Big Bag</h3>
+          <p data-tr="Genel endüstriyel dolum için ideal, forklift ve vinç taşımacılığına tam dayanıklı model." data-en="Ideal for general industrial filling, fully durable for forklift and crane handling.">
+            Genel endüstriyel dolum için ideal, forklift ve vinç taşımacılığına tam dayanıklı model.
+          </p>
+          <ul class="specs-list">
+            <li><i class="fa-solid fa-check"></i> <span data-tr="500 kg - 2000 kg taşıma kapasitesi" data-en="500 kg - 2000 kg safe working load">500 kg - 2000 kg taşıma kapasitesi</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-tr="Bacalı veya etekli dolum opsiyonu" data-en="Spout or skirt filling options">Bacalı veya etekli dolum opsiyonu</span></li>
+          </ul>
+          <button onclick="pickProduct('4 Kulplu Standart Big Bag')" class="card-btn" data-tr="Fiyat İste" data-en="Get Price">Fiyat İste</button>
+        </div>
+
+        <!-- كرت 2 -->
+        <div class="card featured-card">
+          <span class="card-badge featured-badge" data-tr="Depolama Tasarrufu" data-en="Space Saver">Depolama Tasarrufu</span>
+          <h3 data-tr="Q-Bag (Baffle) Kalıp Koruyan" data-en="Q-Bag (Baffle) Shape Keeping">Q-Bag (Baffle) Kalıp Koruyan</h3>
+          <p data-tr="İç panelleri sayesinde şişme yapmaz; tır ve konteyner yüklemelerinde %25 yer kazandırır." data-en="Internal panels prevent outward bulging; saves 25% volume in container transport.">
+            İç panelleri sayesinde şişme yapmaz; tır ve konteyner yüklemelerinde %25 yer kazandırır.
+          </p>
+          <ul class="specs-list">
+            <li><i class="fa-solid fa-check"></i> <span data-tr="Kübik formunu ve dengesini korur" data-en="Maintains straight cubic form">Kübik formunu ve dengesini korur</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-tr="Toz geçirmez korumalı dikiş" data-en="Dust-proof sift-resistant seams">Toz geçirmez korumalı dikiş</span></li>
+          </ul>
+          <button onclick="pickProduct('Q-Bag (Baffle)')" class="card-btn btn-primary" data-tr="Fiyat İste" data-en="Get Price">Fiyat İste</button>
+        </div>
+
+        <!-- كرت 3 -->
+        <div class="card">
+          <span class="card-badge" data-tr="Hava Sirkülasyonlu" data-en="Ventilated">Hava Sirkülasyonlu</span>
+          <h3 data-tr="Ventilli & Körüklü Çuval" data-en="Ventilated Bulk Bag">Ventilli & Körüklü Çuval</h3>
+          <p data-tr="Özel hava kanallı dokuması ile fındık, patates ve tarım ürünlerinin hava almasını sağlar." data-en="Breathable woven fabric allows airflow, preventing moisture in agricultural crops.">
+            Özel hava kanallı dokuması ile fındık, patates ve tarım ürünlerinin hava almasını sağlar.
+          </p>
+          <ul class="specs-list">
+            <li><i class="fa-solid fa-check"></i> <span data-tr="Rutubet ve küflenmeye son verir" data-en="Prevents moisture build-up and mold">Rutubet ve küflenmeye son verir</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-tr="Baskı ve logo uygulama seçeneği" data-en="Custom logo and brand print">Baskı ve logo uygulama seçeneği</span></li>
+          </ul>
+          <button onclick="pickProduct('Ventilli / Körüklü Çuval')" class="card-btn" data-tr="Fiyat İste" data-en="Get Price">Fiyat İste</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- فورم إرسال الطلب (WhatsApp أو Email) -->
+  <section id="teklif" class="form-section">
+    <div class="container form-container">
+      <div class="form-header">
+        <h2 data-tr="Hızlı Fiyat Teklifi İsteyin" data-en="Request Fast Price Quote">Hızlı Fiyat Teklifi İsteyin</h2>
+        <p data-tr="Bilgilerinizi seçin; WhatsApp veya resmi E-posta ile doğrudan bize iletin." data-en="Select requirements and send them directly via WhatsApp or official Email.">
+          Bilgilerinizi seçin; WhatsApp veya resmi E-posta ile doğrudan bize iletin.
+        </p>
+      </div>
+
+      <form id="quote-form" class="custom-form">
+        <div class="input-grid">
+          <div class="form-group">
+            <label data-tr="Ürün Seçimi" data-en="Select Product">Ürün Seçimi</label>
+            <select id="input-product">
+              <option value="4 Kulplu Standart Big Bag">4 Kulplu Standart Big Bag</option>
+              <option value="Q-Bag (Baffle) Form Koruyan">Q-Bag (Baffle) Form Koruyan</option>
+              <option value="Ventilli / Körüklü Çuval">Ventilli / Körüklü Çuval</option>
+              <option value="Özel Ölçülü Üretim">Özel Ölçülü Üretim</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label data-tr="Sipariş Miktarı" data-en="Order Quantity">Sipariş Miktarı</label>
+            <select id="input-qty">
+              <option value="500 - 1.000 Adet">500 - 1.000 Adet</option>
+              <option value="1.000 - 5.000 Adet">1.000 - 5.000 Adet</option>
+              <option value="5.000+ Adet (Tır / Konteyner)">5.000+ Adet (Tır / Konteyner)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label data-tr="Firma Adı & Notunuz" data-en="Company Name & Details">Firma Adı & Notunuz</label>
+          <input type="text" id="input-notes" placeholder="Örn: 90x90x120 cm ebatlarında..." />
+        </div>
+
+        <div class="channel-selection">
+          <label class="channel-title" data-tr="Teklifi Nasıl Göndermek İstersiniz?" data-en="How Would You Like To Send?">Teklifi Nasıl Göndermek İstersiniz?</label>
+          <div class="radio-group">
+            <label class="radio-card">
+              <input type="radio" name="sendChannel" value="whatsapp" checked />
+              <span><i class="fa-brands fa-whatsapp icon-green"></i> WhatsApp</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="sendChannel" value="email" />
+              <span><i class="fa-solid fa-envelope icon-blue"></i> E-Posta</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span data-tr="Teklifi İlet" data-en="Submit Request">Teklifi İlet</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- الفوتر: اللوغو الأبيض على اليسار -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      
+      <!-- ============================================== -->
+      <!-- مكان اللوغو الأبيض (للخلفية الداكنة في الفوتر) -->
+      <!-- استبدل "logo-white.png" باسم ملف الشعار الأبيض لديك -->
+      <!-- ============================================== -->
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <img src="footer-logo.png" alt="Erdaş Big Bag" class="footer-logo-img" />
+        </a>
+        <p class="footer-about" data-tr="Kocaeli Gebze'de dünya standartlarında polipropilen endüstriyel ambalaj ve Big Bag imalatı." data-en="Manufacturing world-class polypropylene bulk packaging solutions in Gebze / Kocaeli.">
+          Kocaeli Gebze'de dünya standartlarında polipropilen endüstriyel ambalaj ve Big Bag imalatı.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-tr="Hızlı Bağlantılar" data-en="Quick Links">Hızlı Bağlantılar</h4>
+        <ul>
+          <li><a href="#urunler" data-tr="Ürün Çeşitleri" data-en="Products">Ürün Çeşitleri</a></li>
+          <li><a href="#teklif" data-tr="Fiyat Teklifi" data-en="Inquiry">Fiyat Teklifi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4 data-tr="İletişim Bilgileri" data-en="Contact Info">İletişim Bilgileri</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Gebze / Kocaeli, Türkiye</p>
+        <p><i class="fa-solid fa-phone"></i> <span id="txt-phone">+90 262 000 00 00</span></p>
+        <p><i class="fa-solid fa-envelope"></i> <span id="txt-email">info@erdasgrup.com</span></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Erdaş Big Bag. <span data-tr="Tüm Hakları Saklıdır." data-en="All Rights Reserved.">Tüm Hakları Saklıdır.</span></p>
+    </div>
+  </footer>
+
+  <!-- جافاسكريبت التحكم باللغات والإرسال -->
+  <script>
+    // إعدادات أرقام وإيميلات المعمل
+    const APP_CONFIG = {
+      whatsapp: "905330000000",   // رقم الواتساب بدون +
+      phone: "+90 262 000 00 00",
+      email: "info@erdasgrup.com",
+      // ضع المفتاح المجاني الذي وصلك من web3forms هنا:
+      web3formsKey: "ضع_المفتاح_هنا"
+    };
+
+    document.getElementById('txt-phone').innerText = APP_CONFIG.phone;
+    document.getElementById('txt-email').innerText = APP_CONFIG.email;
+
+    // تبديل اللغات بين التركية والإنجليزية
+    let currentLang = 'tr';
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('[data-tr]').forEach(el => {
+        el.innerText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-tr');
+      });
+
+      document.getElementById('btn-tr').className = lang === 'tr' ? 'active' : '';
+      document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
+    }
+
+    // زر بطاقات المنتجات للنزول للفورم تلقائياً
+    function pickProduct(name) {
+      const select = document.getElementById('input-product');
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value.includes(name)) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+      document.getElementById('teklif').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // معالجة إرسال النموذج (واتساب أو إيميل حقيقي في الخلفية)
+    const form = document.getElementById('quote-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const product = document.getElementById('input-product').value;
+      const qty = document.getElementById('input-qty').value;
+      const notes = document.getElementById('input-notes').value || 'Belirtilmedi';
+      const channel = document.querySelector('input[name="sendChannel"]:checked').value;
+      const submitBtn = form.querySelector('.submit-btn');
+
+      // 1. إذا اختار الواتساب:
+      if (channel === 'whatsapp') {
+        const msg = currentLang === 'tr'
+          ? `Merhaba Erdaş Big Bag,\nÜrün: ${product}\nMiktar: ${qty}\nNot: ${notes}\nFiyat teklifi rica ederim.`
+          : `Hello Erdas Big Bag,\nProduct: ${product}\nQuantity: ${qty}\nNotes: ${notes}\nPlease send a quote.`;
+        
+        window.open(`https://wa.me/${APP_CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
+        return;
+      }
+
+      // 2. إذا اختار الإيميل: إرسال فوري دون فتح أي تاب
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ${currentLang === 'tr' ? 'Gönderiliyor...' : 'Sending...'}`;
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify({
+            access_key: APP_CONFIG.web3formsKey,
+            subject: `Yeni Big Bag Teklif Talebi: ${product}`,
+            from_name: "Erdaş Web Sitesi",
+            Urun: product,
+            Miktar: qty,
+            Notlar: notes
+          })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          alert(currentLang === 'tr' 
+            ? "Talebiniz başarıyla iletildi! Satış ekibimiz en kısa sürede sizinle iletişime geçecektir." 
+            : "Your request has been sent successfully! Our sales team will contact you shortly.");
+          form.reset();
+        } else {
+          alert(currentLang === 'tr' 
+            ? "Bir hata oluştu. Lütfen WhatsApp üzerinden deneyiniz." 
+            : "An error occurred. Please try via WhatsApp.");
+        }
+      } catch (error) {
+        alert(currentLang === 'tr' 
+          ? "Bağlantı hatası. Lütfen daha sonra tekrar deneyiniz." 
+          : "Network error. Please try again later.");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+    });
+  </script>
+</body>
+</html>
