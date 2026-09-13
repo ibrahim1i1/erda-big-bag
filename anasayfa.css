@@ -9,7 +9,7 @@
   --border-color: #e2e8f0;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 1420px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -43,7 +43,7 @@ a {
 .top-bar {
   background-color: var(--dark-navy);
   color: #cbd5e1;
-  padding: 10px 0;
+  padding: 15px 0;
   font-size: 13.5px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -77,7 +77,7 @@ a {
   color: #94a3b8;
   font-weight: 600;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 17px;
   transition: color 0.2s;
 }
 
@@ -87,7 +87,7 @@ a {
   font-weight: 700;
 }
 
-/* ================= 2. النافبار الأساسي ================= */
+/* ================= 2. النافبار الأساسي مع الأنيميشن الخاص بك ================= */
 .main-header {
   background: #ffffff;
   border-bottom: 1px solid var(--border-color);
@@ -98,7 +98,7 @@ a {
 }
 
 .nav-content {
-  height: 82px;
+  height: 92px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,13 +110,13 @@ a {
 }
 
 .header-logo-img {
-  height: 48px;
+  height: 70px;
   width: auto;
-  max-width: 190px;
+  max-width: 300px;
   object-fit: contain;
 }
 
-/* روابط الكمبيوتر */
+/* روابط الكمبيوتر مع أنيميشن الخط الأزرق السفلي عند التحويم */
 .nav-links {
   list-style: none;
   display: flex;
@@ -127,26 +127,31 @@ a {
 .nav-links a {
   color: var(--text-dark);
   font-weight: 600;
-  font-size: 15.5px;
-  transition: color 0.2s;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  padding: 10px;
 }
 
 .nav-links a:hover {
   color: var(--primary-blue);
+  border-bottom: solid 3px var(--primary-blue);
+  padding: 10px;
 }
 
 .nav-btn {
   background: var(--dark-navy) !important;
   color: #ffffff !important;
-  padding: 10px 22px;
+  padding: 10px 22px !important;
   border-radius: 8px;
   font-weight: 700 !important;
-  transition: all 0.25s ease;
+  border-bottom: none !important;
+  transition: all 0.3s ease;
 }
 
 .nav-btn:hover {
   background: var(--primary-blue) !important;
   transform: translateY(-2px);
+  border-bottom: none !important;
 }
 
 /* القائمة المنسدلة (Ürünlerimiz) */
@@ -159,11 +164,11 @@ a {
   align-items: center;
   gap: 6px;
   font-weight: 600;
-  font-size: 15.5px;
+  font-size: 17px;
   color: var(--text-dark);
   cursor: pointer;
-  padding: 8px 0;
-  transition: color 0.2s;
+  padding: 10px;
+  transition: color 0.3s ease;
 }
 
 .dropdown-toggle:hover {
@@ -171,15 +176,15 @@ a {
 }
 
 .arrow-icon {
-  font-size: 11px;
-  transition: transform 0.25s;
+  font-size: 12px;
+  transition: transform 0.25s ease;
 }
 
 .submenu {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 230px;
+  min-width: 250px;
   background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: 10px;
@@ -196,14 +201,16 @@ a {
 .submenu li a {
   display: block;
   padding: 10px 20px;
-  font-size: 14.5px;
+  font-size: 15px;
   color: var(--text-dark);
+  border-bottom: none !important;
 }
 
 .submenu li a:hover {
   background: #f0f9ff;
   color: var(--primary-blue);
   padding-left: 24px;
+  border-bottom: none !important;
 }
 
 @media (min-width: 851px) {
@@ -224,6 +231,7 @@ a {
   background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
   padding: 70px 0;
   border-bottom: 1px solid var(--border-color);
+  height: 80vh;
 }
 
 .hero-grid {
@@ -243,7 +251,7 @@ a {
 }
 
 .hero-desc {
-  font-size: 17.5px;
+  font-size: 20px;
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 30px;
@@ -289,8 +297,8 @@ a {
 
 .hero-image-box {
   position: relative;
-  width: 100%;
-  height: 420px;
+  width: 650px;
+  height: 470px;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
@@ -324,135 +332,88 @@ a {
   font-size: 14px;
 }
 
-/* ================= 4. سكشن Ürünlerimiz الجديد (تصميم الصورة) ================= */
-.products-section {
-  padding: 85px 0;
+/* ================= 4. سكشن الأكياس الأربعة (أبعادك الأصلية للكمبيوتر) ================= */
+.erdas-showcase-section {
+  padding: 60px 0 80px;
   background-color: #ffffff;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.products-head {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto 55px;
-}
-
-.sub-tag {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--primary-blue);
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-
-.section-title {
-  font-size: 38px;
-  font-weight: 800;
-  color: var(--dark-navy);
-  margin-bottom: 12px;
-}
-
-.section-desc {
-  font-size: 16.5px;
-  color: var(--text-muted);
-}
-
-/* تقسيم الكتالوج: 4 كروت في السطر الأول و 4 في السطر الثاني */
-.bags-catalog-grid {
+.erdas-bags-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px 24px;
+  gap: 60px;
+  align-items: start;
+  width: 100%;
 }
 
-.bag-card {
-  background: #ffffff;
-  border-radius: 12px;
+.erdas-bag-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  text-align: center;
+  background: transparent;
+  padding: 0;
+}
+
+.bag-header-line {
+  margin-bottom: 15px;
+}
+
+.bag-header-line h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #374151;
+  letter-spacing: -0.2px;
+}
+
+.bag-render-view {
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 0;
+}
+
+.bag-render-view img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
   transition: transform 0.3s ease;
 }
 
-.bag-card:hover {
-  transform: translateY(-6px);
+.erdas-bag-item:hover .bag-render-view img {
+  transform: translateY(-5px);
 }
 
-/* الخط الأفقي المقسم للاسم تماماً كما في شاشة موقع Akepak */
-.bag-tab-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.bag-tab-header::before,
-.bag-tab-header::after {
-  content: '';
-  flex: 1;
-  height: 1.5px;
-  background-color: #e2e8f0;
-}
-
-.bag-tab-header span {
-  font-size: 15px;
-  font-weight: 700;
-  color: #334155;
-  white-space: nowrap;
-}
-
-/* إطار صورة الكيس */
-.bag-img-container {
-  width: 100%;
-  height: 230px;
-  background: #fafbfc;
-  border: 1px solid #f1f5f9;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  margin-bottom: 16px;
-}
-
-.bag-img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.35s ease;
-}
-
-.bag-card:hover .bag-img-container img {
-  transform: scale(1.06);
-}
-
-/* زر İncele المضاف لكل كيس */
-.btn-bag-action {
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 9px 18px;
-  background-color: #f1f5f9;
-  color: var(--dark-navy);
+.btn-clean-incele {
+  display: inline-block;
+  padding: 8px 32px;
   font-size: 14px;
-  font-weight: 700;
-  border-radius: 8px;
+  font-weight: 600;
+  color: #0284c7;
+  background-color: transparent;
+  border: 1.5px solid #0284c7;
+  border-radius: 6px;
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 
-.btn-bag-action:hover {
-  background-color: var(--primary-blue);
+.btn-clean-incele:hover {
+  background-color: #0284c7;
   color: #ffffff;
 }
 
-/* ================= سكشن المميزات والحلول الصناعية ================= */
+/* ================= 5. سكشن المميزات والحلول الصناعية ================= */
 .solutions-section {
   padding: 85px 0;
   background-color: #f8fafc;
-  border-top: 1px solid var(--border-color, #e2e8f0);
+  border-top: 1px solid var(--border-color);
 }
 
 .solutions-header {
@@ -465,7 +426,7 @@ a {
   display: inline-block;
   font-size: 13px;
   font-weight: 800;
-  color: var(--primary-blue, #0284c7);
+  color: var(--primary-blue);
   background-color: #e0f2fe;
   padding: 5px 16px;
   border-radius: 999px;
@@ -476,7 +437,7 @@ a {
 .solutions-title {
   font-size: 36px;
   font-weight: 800;
-  color: var(--dark-navy, #060b18);
+  color: var(--dark-navy);
   line-height: 1.25;
   margin-bottom: 14px;
   letter-spacing: -0.5px;
@@ -484,21 +445,19 @@ a {
 
 .solutions-subtitle {
   font-size: 16.5px;
-  color: var(--text-muted, #64748b);
+  color: var(--text-muted);
   line-height: 1.65;
 }
 
-/* شبكة الكروت (2 في الصف على شاشات الكمبيوتر واللابتوب) */
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 
-/* بطاقة الميزة */
 .solution-card {
   background: #ffffff;
-  border: 1px solid var(--border-color, #e2e8f0);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 34px 30px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
@@ -509,7 +468,6 @@ a {
   overflow: hidden;
 }
 
-/* خط علوي ملون لكل بطاقة ليعطي لمسة هوية صناعية راقية */
 .solution-card::before {
   content: '';
   position: absolute;
@@ -520,10 +478,10 @@ a {
   transition: height 0.25s ease;
 }
 
-.card-capacity::before { background-color: #dc2626; } /* أحمر للوزن الثقيل */
-.card-material::before { background-color: #0284c7; } /* أزرق للمتانة */
-.card-uv::before       { background-color: #7c3aed; } /* بنفسجي للأشعة فوق البنفسجية */
-.card-safety::before   { background-color: #16a34a; } /* أخضر للأمان والجودة */
+.card-capacity::before { background-color: #dc2626; }
+.card-material::before { background-color: #0284c7; }
+.card-uv::before       { background-color: #7c3aed; }
+.card-safety::before   { background-color: #16a34a; }
 
 .solution-card:hover {
   transform: translateY(-6px);
@@ -535,7 +493,6 @@ a {
   height: 6px;
 }
 
-/* مربع الأيقونة */
 .card-icon-box {
   width: 52px;
   height: 52px;
@@ -556,37 +513,17 @@ a {
 .card-title {
   font-size: 20px;
   font-weight: 700;
-  color: var(--dark-navy, #060b18);
+  color: var(--dark-navy);
   margin-bottom: 12px;
 }
 
 .card-desc {
   font-size: 15.5px;
-  color: var(--text-muted, #475569);
+  color: #475569;
   line-height: 1.7;
 }
 
-/* تجاوب الشاشات للهواتف (Responsive) */
-@media (max-width: 850px) {
-  .solutions-section {
-    padding: 60px 0;
-  }
-
-  .solutions-grid {
-    grid-template-columns: 1fr; /* كرت واحد لكل سطر في الموبايل */
-    gap: 20px;
-  }
-
-  .solutions-title {
-    font-size: 28px;
-  }
-
-  .solution-card {
-    padding: 26px 22px;
-  }
-}
-
-/* ================= 5. الفوتر ================= */
+/* ================= 6. الفوتر ================= */
 .main-footer {
   background: var(--dark-navy);
   color: #94a3b8;
@@ -659,7 +596,7 @@ a {
   font-size: 13.5px;
 }
 
-/* ================= 6. زر الواتساب العائم مع النبض ================= */
+/* ================= 7. زر الواتساب العائم ================= */
 .floating-whatsapp {
   position: fixed;
   bottom: 25px;
@@ -696,20 +633,13 @@ a {
 }
 
 @keyframes ripple {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
 }
 
-/* ================= 7. حل وتصحيح مشاكل الهاتف (Responsive 100%) ================= */
-/* زر الهامبرغر */
+/* ================= 8. تجاوب الهواتف (بدون لمس أحجام الكمبيوتر) ================= */
 .menu-btn {
-  display: none; /* مخفي في الكمبيوتر */
+  display: none;
   width: 32px;
   height: 24px;
   position: relative;
@@ -717,7 +647,7 @@ a {
   border: none;
   cursor: pointer;
   z-index: 1002;
-  pointer-events: auto; /* يضمن إمكانية النقر دائماً */
+  pointer-events: auto;
 }
 
 .menu-btn span {
@@ -729,27 +659,17 @@ a {
   left: 0;
   border-radius: 3px;
   transition: all 0.3s ease;
-  pointer-events: none; /* يمنع ابتلاع النقر من الزر */
+  pointer-events: none;
 }
 
 .menu-btn span:nth-child(1) { top: 0; }
 .menu-btn span:nth-child(2) { top: 10px; }
 .menu-btn span:nth-child(3) { top: 20px; }
 
-/* تحول الهامبرغر إلى X */
-.menu-btn.open span:nth-child(1) {
-  top: 10px;
-  transform: rotate(45deg);
-}
-.menu-btn.open span:nth-child(2) {
-  opacity: 0;
-}
-.menu-btn.open span:nth-child(3) {
-  top: 10px;
-  transform: rotate(-45deg);
-}
+.menu-btn.open span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+.menu-btn.open span:nth-child(2) { opacity: 0; }
+.menu-btn.open span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
 
-/* خلفية التعتيم */
 .nav-backdrop {
   position: fixed;
   inset: 0;
@@ -765,20 +685,31 @@ a {
   visibility: visible;
 }
 
-/* شاشات اللابتوب المتوسطة */
-@media (max-width: 1100px) {
-  .bags-catalog-grid {
+@media (max-width: 992px) {
+  .hero-section {
+    height: auto;
+  }
+  .hero-image-box {
+    width: 100%;
+    height: 380px;
+  }
+  .erdas-showcase-section {
+    height: auto;
+  }
+  .erdas-bags-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 35px 20px;
+  }
+  .bag-render-view {
+    height: 380px;
   }
 }
 
-/* الشاشات الصغيرة والهواتف */
 @media (max-width: 850px) {
   .menu-btn {
     display: block;
   }
 
-  /* القائمة الجانبية المنزلقة */
   .nav-links {
     position: fixed;
     top: 0;
@@ -794,7 +725,7 @@ a {
     gap: 12px;
     transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1001;
-    display: flex !important; /* يلغي display: none القديم بشكل قاطع */
+    display: flex !important;
     overflow-y: auto;
   }
 
@@ -813,7 +744,10 @@ a {
     font-size: 16.5px;
   }
 
-  /* فتح القائمة المنسدلة على الهاتف */
+  .nav-links a:hover {
+    border-bottom: none;
+  }
+
   .submenu {
     position: static;
     opacity: 1;
@@ -851,8 +785,9 @@ a {
     font-size: 32px;
   }
 
-  .hero-image-box {
-    height: 320px;
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .footer-grid {
@@ -862,12 +797,13 @@ a {
 }
 
 @media (max-width: 580px) {
-  .bags-catalog-grid {
-    grid-template-columns: 1fr; /* كيس واحد بالصف لراحة العين */
+  .erdas-bags-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
   }
-
-  .top-info span:nth-child(2) {
-    display: none;
+  
+  .bag-render-view {
+    height: 280px;
   }
 
   .floating-whatsapp {

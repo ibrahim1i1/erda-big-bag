@@ -7,12 +7,11 @@
 
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="anasayfa.css">
-
 </head>
 <body>
 
@@ -20,8 +19,8 @@
   <aside class="top-bar">
     <div class="container top-bar-content">
       <div class="top-info">
-        <span><i class="fa-solid fa-location-dot"></i> Gebze / Kocaeli, Türkiye</span>
-        <span class="badge"><i class="fa-solid fa-phone"></i> +90 262 000 00 00</span>
+        <span><i class="fa-solid fa-location-dot"></i> <span data-tr="Gebze / Kocaeli, Türkiye" data-en="Gebze / Kocaeli, Turkey">Gebze / Kocaeli, Türkiye</span></span>
+        <span class="badge"><i class="fa-solid fa-phone"></i> +90 531 386 66 20</span>
       </div>
       <div class="lang-switch">
         <i class="fa-solid fa-globe"></i>
@@ -32,210 +31,131 @@
     </div>
   </aside>
 
-  <!-- 2. النافبار (تم إصلاح مشاكل الهاتف بالكامل) -->
+  <!-- 2. النافبار الأساسي -->
   <header class="main-header">
     <div class="container nav-content">
       
       <!-- اللوجو -->
-      <a href="#" class="brand-logo">
-        <img src="logo.png" alt="Erdaş Big Bag" class="header-logo-img" onerror="this.src='https://via.placeholder.com/180x45/060b18/ffffff?text=ERDAS+LOGO'" />
+      <a href="index.html" class="brand-logo">
+        <img src="images/logo.png" alt="Erdaş Big Bag" class="header-logo-img" onerror="this.src='https://via.placeholder.com/220x60/060b18/ffffff?text=ERDAS+LOGO'" />
       </a>
 
-      <!-- زر الهامبرغر للهاتف (يتحول إلى X) -->
+      <!-- زر القائمة للهاتف (يتحول إلى X) -->
       <button class="menu-btn" id="menuBtn" aria-label="Menüyü Aç/Kapat">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- روابط النافبار مع القائمة المنسدلة -->
+      <!-- روابط النافبار -->
       <ul class="nav-links" id="navLinks">
         <li><a href="#anasayfa" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
-        <li><a href="#hakkimizda" data-tr="Hakkımızda" data-en="About">Hakkımızda</a></li>
+        <li><a href="#hakkimizda" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
         
-        <!-- لستة Ürünlerimiz المنسدلة المطلوبة -->
+        <!-- قائمة Ürünlerimiz المنسدلة -->
         <li class="dropdown-item">
           <div class="dropdown-toggle">
             <span data-tr="Ürünlerimiz" data-en="Products">Ürünlerimiz</span>
             <i class="fa-solid fa-chevron-down arrow-icon"></i>
           </div>
           <ul class="submenu">
-            <li><a href="#standart-bag">Standart Big Bag</a></li>
-            <li><a href="#q-bag">Q-Bag (Formlu Torba)</a></li>
-            <li><a href="#iletken-bag">İletken Torba</a></li>
-            <li><a href="#un-bag">UN Onaylı Torba</a></li>
-            <li><a href="#urunler">Tüm Ürünleri Gör</a></li>
+            <li><a href="#Standart-4-Kulplu-Torba" data-tr="Standart 4 Kulplu Torba" data-en="Standard 4-Loop Bag">Standart 4 Kulplu Torba</a></li>
+            <li><a href="#Q-Bag-Torba" data-tr="Q-Bag Torba" data-en="Q-Bag (Baffle Bag)">Q-Bag Torba</a></li>
+            <li><a href="#Ic-Naylonlu-Big-Bag" data-tr="İç Naylonlu Big Bag" data-en="Liner Big Bag">İç Naylonlu Big Bag</a></li>
+            <li><a href="#Capraz-Kulplu-Big-Bag" data-tr="Çapraz Kulplu Big Bag" data-en="Cross-Corner Bag">Çapraz Kulplu Big Bag</a></li>
+            <li><a href="#torba-tipleri" data-tr="Tüm Ürünleri Gör" data-en="View All Products">Tüm Ürünleri Gör</a></li>
           </ul>
         </li>
 
-        <li><a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a></li>
-        <li><a href="#teklif" class="nav-btn" data-tr="Fiyat Teklifi Al" data-en="Get a Quote">Fiyat Teklifi Al</a></li>
+        <li><a href="iletisim.html" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+        <li><a href="iletisim.html" class="nav-btn" data-tr="Fiyat Teklifi Al" data-en="Get a Quote">Fiyat Teklifi Al</a></li>
       </ul>
 
     </div>
   </header>
 
-  <!-- طبقة تعتيم عند فتح القائمة على الموبايل -->
+  <!-- طبقة تعتيم الموبايل -->
   <div class="nav-backdrop" id="navBackdrop"></div>
 
-  <!-- 3. قسم الهيرو الرئيسي (Hero Section) -->
+  <!-- 3. قسم الهيرو -->
   <section class="hero-section" id="anasayfa">
     <div class="container hero-grid">
       <div class="hero-text">
         <h1 data-tr="Ağır Yükler İçin Güçlü & Dayanıklı Big Bag" data-en="Strong & Durable Big Bags For Heavy Loads">
           Ağır Yükler İçin Güçlü &amp; Dayanıklı Big Bag
         </h1>
-        <p class="hero-desc" data-tr="Gebze tesislerimizde 500 kg ile 2000 kg taşıma kapasiteli, maden, kimya ve tarım sektörlerine özel yüksek mukavemetli çuval üretimi.">
+        <p class="hero-desc" data-tr="Gebze tesislerimizde 500 kg ile 2000 kg taşıma kapasiteli, maden, kimya ve tarım sektörlerine özel yüksek mukavemetli çuval üretimi." data-en="High-strength bag production with 500 kg to 2000 kg carrying capacity in our Gebze facilities, specialized for mining, chemical and agricultural sectors.">
           Gebze tesislerimizde 500 kg ile 2000 kg taşıma kapasiteli, maden, kimya ve tarım sektörlerine özel yüksek mukavemetli çuval üretimi.
         </p>
         <div class="hero-actions">
-          <a href="#teklif" class="btn btn-primary">
+          <a href="iletisim.html" class="btn btn-primary">
             <i class="fa-solid fa-calculator"></i>
             <span data-tr="Hemen Teklif Al" data-en="Request Instant Quote">Hemen Teklif Al</span>
           </a>
-          <a href="#urunler" class="btn btn-secondary" data-tr="Ürünleri İncele" data-en="View Products">
+          <a href="#torba-tipleri" class="btn btn-secondary" data-tr="Ürünleri İncele" data-en="View Products">
             Ürünleri İncele
           </a>
         </div>
       </div>
 
       <div class="hero-image-box">
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1000&auto=format&fit=crop&q=80" alt="Erdaş Big Bag" class="active" />
-        <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?w=1000&auto=format&fit=crop&q=80" alt="Erdaş Big Bag Depo" />
+        <img src="https://img.freepik.com/premium-photo/captivating-4k-image-showcasing-exterior-factory_717732-6715.jpg" alt="Erdaş Big Bag" class="active" />
+        <img src="https://media.istockphoto.com/id/2143488405/photo/advanced-robot-arm-conveyor-line-manufacturing-electronics-enclosure-boxes-high-angle-shot.jpg?s=170667a&w=0&k=20&c=dC_Ten2cziGuMeFsWdTyz-aTs3RxQsa5kQY2i2-KUg0=" alt="Erdaş Big Bag Depo" />
         <div class="image-label">
-          <span>Yüksek Mukavemetli Sanayi Çuvalları</span>
+          <span data-tr="Yüksek Mukavemetli Sanayi Çuvalları" data-en="High Durability Industrial Bags">Yüksek Mukavemetli Sanayi Çuvalları</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. سكشن Ürünlerimiz الجديد (مطابق للصورة تماماً) -->
-  <section id="urunler" class="products-section">
+  <!-- 4. سكشن موديلات الأكياس الأربعة (مربوط بالمعرفات IDs بدقة) -->
+  <section class="erdas-showcase-section" id="torba-tipleri">
     <div class="container">
       
-      <!-- عنوان السكشن والوصف كما في صورة Akepak -->
-      <div class="products-head">
-        <span class="sub-tag">ENDÜSTRİYEL ÇÖZÜMLER</span>
-        <h2 class="section-title">Ürünlerimiz</h2>
-        <p class="section-desc">
-          Taşımakla kalmaz; korur, optimize eder ve değer katar.
-        </p>
-      </div>
-
-      <!-- شبكة عرض الأكياس (4 في الصف الأول + 4 في الصف الثاني) -->
-      <div class="bags-catalog-grid">
+      <div class="erdas-bags-grid">
         
         <!-- 1. Standart Torba -->
-        <div class="bag-card" id="standart-bag">
-          <div class="bag-tab-header">
-            <span>Standart Torba</span>
+        <div class="erdas-bag-item" id="Standart-4-Kulplu-Torba">
+          <div class="bag-header-line">
+            <h4 data-tr="Standart 4 Kulplu Torba" data-en="Standard 4-Loop Bag">Standart 4 Kulplu Torba</h4>
           </div>
-          <div class="bag-img-container">
-            <!-- استبدل الرابط بصورتك الخاصة -->
-            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=500&auto=format&fit=crop&q=70" alt="Standart Torba" />
+          <div class="bag-render-view">
+            <img src="images/standart-big-bag.png" alt="Standart Torba" onerror="this.src='https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&auto=format&fit=crop&q=80'" />
           </div>
-          <a href="#teklif" class="btn-bag-action">
-            <span>İncele</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <a href="iletisim.html" class="btn-clean-incele" data-tr="İncele" data-en="Inspect">İncele</a>
         </div>
 
         <!-- 2. Q Torba -->
-        <div class="bag-card" id="q-bag">
-          <div class="bag-tab-header">
-            <span>Q Torba</span>
+        <div class="erdas-bag-item" id="Q-Bag-Torba">
+          <div class="bag-header-line">
+            <h4 data-tr="Q-Bag Torba" data-en="Q-Bag (Baffle Bag)">Q-Bag Torba</h4>
           </div>
-          <div class="bag-img-container">
-            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=500&auto=format&fit=crop&q=70" alt="Q Torba" />
+          <div class="bag-render-view">
+            <img src="images/Q-bag.png" alt="Q Torba" onerror="this.src='https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=600&auto=format&fit=crop&q=80'" />
           </div>
-          <a href="#teklif" class="btn-bag-action">
-            <span>İncele</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <a href="iletisim.html" class="btn-clean-incele" data-tr="İncele" data-en="Inspect">İncele</a>
         </div>
 
-        <!-- 3. İletken Torba -->
-        <div class="bag-card" id="iletken-bag">
-          <div class="bag-tab-header">
-            <span>İletken Torba ⚡</span>
+        <!-- 3. İç Naylonlu Torba -->
+        <div class="erdas-bag-item" id="Ic-Naylonlu-Big-Bag">
+          <div class="bag-header-line">
+            <h4 data-tr="İç Naylonlu Big Bag" data-en="Liner Big Bag">İç Naylonlu Big Bag</h4>
           </div>
-          <div class="bag-img-container">
-            <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=500&auto=format&fit=crop&q=70" alt="İletken Torba" />
+          <div class="bag-render-view">
+            <img src="images/ic-naylonlu-big-bag.png" alt="İç Naylonlu Torba" onerror="this.src='https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&auto=format&fit=crop&q=80'" />
           </div>
-          <a href="#teklif" class="btn-bag-action">
-            <span>İncele</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <a href="iletisim.html" class="btn-clean-incele" data-tr="İncele" data-en="Inspect">İncele</a>
         </div>
 
-        <!-- 4. Naylonlu Torba -->
-        <div class="bag-card">
-          <div class="bag-tab-header">
-            <span>Naylonlu Torba</span>
+        <!-- 4. Çapraz Kulplu Torba -->
+        <div class="erdas-bag-item" id="Capraz-Kulplu-Big-Bag">
+          <div class="bag-header-line">
+            <h4 data-tr="Çapraz Kulplu Big Bag" data-en="Cross-Corner Bag">Çapraz Kulplu Big Bag</h4>
           </div>
-          <div class="bag-img-container">
-            <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=500&auto=format&fit=crop&q=70" alt="Naylonlu Torba" />
+          <div class="bag-render-view">
+            <img src="images/capraz-kuplu-big-bag.png" alt="Çapraz Kulplu Torba" onerror="this.src='https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=600&auto=format&fit=crop&q=80'" />
           </div>
-          <a href="#teklif" class="btn-bag-action">
-            <span>İncele</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <!-- 5. Gıdaya Uygun Torba -->
-        <div class="bag-card">
-          <div class="bag-tab-header">
-            <span>Gıdaya Uygun Torba</span>
-          </div>
-          <div class="bag-img-container">
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500&auto=format&fit=crop&q=70" alt="Gıdaya Uygun Torba" />
-          </div>
-          <a href="#teklif" class="btn-bag-action">
-            <span>İncele</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <!-- 6. UN Torba -->
-        <div class="bag-card" id="un-bag">
-          <div class="bag-tab-header">
-            <span>UN Torba ⚠️</span>
-          </div>
-          <div class="bag-img-container">
-            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=500&auto=format&fit=crop&q=70" alt="UN Torba" />
-          </div>
-          <a href="#teklif" class="btn-bag-action">
-            <span>İncele</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <!-- 7. Ventilli & File Torba -->
-        <div class="bag-card">
-          <div class="bag-tab-header">
-            <span>Ventilli &amp; File Torba</span>
-          </div>
-          <div class="bag-img-container">
-            <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=500&auto=format&fit=crop&q=70" alt="Ventilli ve File Torba" />
-          </div>
-          <a href="#teklif" class="btn-bag-action">
-            <span>İncele</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <!-- 8. Tek & İki Kaldırma Torba -->
-        <div class="bag-card">
-          <div class="bag-tab-header">
-            <span>Tek &amp; İki Kaldırma Torba</span>
-          </div>
-          <div class="bag-img-container">
-            <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=500&auto=format&fit=crop&q=70" alt="Tek ve İki Kaldırma Torba" />
-          </div>
-          <a href="#teklif" class="btn-bag-action">
-            <span>İncele</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <a href="iletisim.html" class="btn-clean-incele" data-tr="İncele" data-en="Inspect">İncele</a>
         </div>
 
       </div>
@@ -243,97 +163,84 @@
     </div>
   </section>
 
-<!-- ================= سكشن حلول تصنيع الـ Big Bag الصناعي ================= -->
-<section class="solutions-section" id="cozumler">
-  <div class="container">
-    
-    <!-- العنوان الرئيسي والوصف -->
-    <div class="solutions-header">
-      <span class="badge-tag">ENDÜSTRİYEL KALİTE</span>
-      <h2 class="solutions-title">FIBC (Big Bag) Torba Üretiminde Güvenilir Çözümler</h2>
-      <p class="solutions-subtitle">
-        Yüksek kaliteli Big Bag torbalarımızla işinizi kolaylaştırıyor, ağır sanayi ve hammadde taşımacılığında güvenli ve verimli lojistik süreçler sunuyoruz.
-      </p>
-    </div>
-
-    <!-- شبكة الكروت الأربعة المتجاوبة -->
-    <div class="solutions-grid">
+  <!-- 5. سكشن حلول تصنيع الـ Big Bag الصناعي (Hakkımızda) -->
+  <section class="solutions-section" id="hakkimizda">
+    <div class="container">
       
-      <!-- كارت 1: قدرة التحمل العالية -->
-      <div class="solution-card card-capacity">
-        <div class="card-icon-box">
-          <i class="fa-solid fa-weight-hanging"></i>
-        </div>
-        <h3 class="card-title">Yüksek Taşıma Kapasitesi</h3>
-        <p class="card-desc">
-          Yüksek taşıma kapasitesine sahip FIBC (Big Bag) torbalar; ağır, granül ve hacimli malzemelerin güvenli, ekonomik ve verimli şekilde taşınmasını sağlar. Dayanıklı yapısı sayesinde endüstriyel kullanım için ideal bir ambalaj çözümüdür.
+      <div class="solutions-header">
+        <span class="badge-tag" data-tr="ENDÜSTRİYEL KALİTE" data-en="INDUSTRIAL QUALITY">ENDÜSTRİYEL KALİTE</span>
+        <h2 class="solutions-title" data-tr="FIBC (Big Bag) Torba Üretiminde Güvenilir Çözümler" data-en="Reliable Solutions in FIBC (Big Bag) Bag Production">
+          FIBC (Big Bag) Torba Üretiminde Güvenilir Çözümler
+        </h2>
+        <p class="solutions-subtitle" data-tr="Yüksek kaliteli Big Bag torbalarımızla işinizi kolaylaştırıyor, ağır sanayi ve hammadde taşımacılığında güvenli ve verimli lojistik süreçler sunuyoruz." data-en="We simplify your business with our high-quality Big Bag sacks, offering safe and efficient logistics processes in heavy industry and raw material transport.">
+          Yüksek kaliteli Big Bag torbalarımızla işinizi kolaylaştırıyor, ağır sanayi ve hammadde taşımacılığında güvenli ve verimli lojistik süreçler sunuyoruz.
         </p>
       </div>
 
-      <!-- كارت 2: مادة متينة عالية التحمل -->
-      <div class="solution-card card-material">
-        <div class="card-icon-box">
-          <i class="fa-solid fa-shield-halved"></i>
+      <div class="solutions-grid">
+        
+        <div class="solution-card card-capacity">
+          <div class="card-icon-box"><i class="fa-solid fa-weight-hanging"></i></div>
+          <h3 class="card-title" data-tr="Yüksek Taşıma Kapasitesi" data-en="High Carrying Capacity">Yüksek Taşıma Kapasitesi</h3>
+          <p class="card-desc" data-tr="Yüksek taşıma kapasitesine sahip FIBC (Big Bag) torbalar; ağır, granül ve hacimli malzemelerin güvenli, ekonomik ve verimli şekilde taşınmasını sağlar. Dayanıklı yapısı sayesinde endüstriyel kullanım için idealdir." data-en="FIBC bags with high load capacity ensure safe, economical, and efficient transport of heavy, granular, and bulky materials. Ideal for industrial use.">
+            Yüksek taşıma kapasitesine sahip FIBC (Big Bag) torbalar; ağır, granül ve hacimli malzemelerin güvenli, ekonomik ve verimli şekilde taşınmasını sağlar. Dayanıklı yapısı sayesinde endüstriyel kullanım için idealdir.
+          </p>
         </div>
-        <h3 class="card-title">Dayanıklı Malzeme</h3>
-        <p class="card-desc">
-          Dayanıklı polipropilen (PP) dokumadan üretilen torbalar, zorlu taşıma ve şantiye/depolama koşullarına karşı yüksek direnç gösterir. Uzun ömürlü kullanım sunarak sanayi ihtiyaçlarına güvenilir ambalaj çözümü sağlar.
-        </p>
-      </div>
 
-      <!-- كارت 3: مقاومة الشمس والرطوبة -->
-      <div class="solution-card card-uv">
-        <div class="card-icon-box">
-          <i class="fa-solid fa-sun"></i>
+        <div class="solution-card card-material">
+          <div class="card-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="card-title" data-tr="Dayanıklı Malzeme" data-en="Durable Material">Dayanıklı Malzeme</h3>
+          <p class="card-desc" data-tr="Dayanıklı polipropilen (PP) dokumadan üretilen torbalar, zorlu taşıma ve şantiye/depolama koşullarına karşı yüksek direnç gösterir. Uzun ömürlü kullanım sunar." data-en="Manufactured from durable polypropylene (PP) fabric, the bags exhibit high resistance to demanding transport and warehouse conditions. Offers long service life.">
+            Dayanıklı polipropilen (PP) dokumadan üretilen torbalar, zorlu taşıma ve şantiye/depolama koşullarına karşı yüksek direnç gösterir. Uzun ömürlü kullanım sunar.
+          </p>
         </div>
-        <h3 class="card-title">UV ve Nem Direnci</h3>
-        <p class="card-desc">
-          UV ve neme karşı dayanıklı koruyucu kumaş yapısı sayesinde torbalar, güneş ışığına ve zorlu çevresel koşullara karşı formunu uzun süre korur. Açık alan depolama ve sevkiyat süreçlerinde güvenli kullanım sağlar.
-        </p>
-      </div>
 
-      <!-- كارت 4: الأمان وقوة الخياطة الصناعية -->
-      <div class="solution-card card-safety">
-        <div class="card-icon-box">
-          <i class="fa-solid fa-certificate"></i>
+        <div class="solution-card card-uv">
+          <div class="card-icon-box"><i class="fa-solid fa-sun"></i></div>
+          <h3 class="card-title" data-tr="UV ve Nem Direnci" data-en="UV and Moisture Resistance">UV ve Nem Direnci</h3>
+          <p class="card-desc" data-tr="UV ve neme karşı dayanıklı koruyucu kumaş yapısı sayesinde torbalar, güneş ışığına ve zorlu çevresel koşullara karşı formunu uzun süre korur. Açık alan depolamada tam güven sağlar." data-en="Thanks to its UV and moisture resistant protective fabric, the bags maintain their shape against sunlight and harsh weather conditions for extended open-air storage.">
+            UV ve neme karşı dayanıklı koruyucu kumaş yapısı sayesinde torbalar, güneş ışığına ve zorlu çevresel koşullara karşı formunu uzun süre korur. Açık alan depolamada tam güven sağlar.
+          </p>
         </div>
-        <h3 class="card-title">Güvenlik Öncelikli</h3>
-        <p class="card-desc">
-          Uluslararası emniyet katsayılarına (5:1 ve 6:1) uygun üretilen Big Bag torbalar, maksimum taşıma güvenliği sağlar. Yüksek mukavemetli kolon dikişleri ve kolon taşıma sistemleri sayesinde yükleme risklerini en aza indirir.
-        </p>
+
+        <div class="solution-card card-safety">
+          <div class="card-icon-box"><i class="fa-solid fa-certificate"></i></div>
+          <h3 class="card-title" data-tr="Güvenlik Öncelikli" data-en="Safety First">Güvenlik Öncelikli</h3>
+          <p class="card-desc" data-tr="Uluslararası emniyet katsayılarına (5:1 ve 6:1) uygun üretilen Big Bag torbalar, maksimum taşıma güvenliği sağlar. Yüksek mukavemetli kolon dikişleri sayesinde kaldırma risklerini en aza indirir." data-en="Produced in accordance with international safety factors (5:1 and 6:1), Big Bags ensure maximum transport safety and minimize lifting risks with reinforced seams.">
+            Uluslararası emniyet katsayılarına (5:1 ve 6:1) uygun üretilen Big Bag torbalar, maksimum taşıma güvenliği sağlar. Yüksek mukavemetli kolon dikişleri sayesinde kaldırma risklerini en aza indirir.
+          </p>
+        </div>
+
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
-
-
-  <!-- 5. الفوتر (Footer) -->
-  <footer class="main-footer" id="iletisim">
+  <!-- 6. الفوتر -->
+  <footer class="main-footer">
     <div class="container footer-grid">
       
       <div class="footer-brand">
-        <a href="#" class="brand-logo">
-          <img src="footer-logo.png" alt="Erdaş Big Bag" class="footer-logo-img" onerror="this.src='https://via.placeholder.com/180x45/060b18/ffffff?text=ERDAS+LOGO'" />
+        <a href="index.html" class="brand-logo">
+          <img src="images/logo.png" alt="Erdaş Big Bag" class="footer-logo-img" onerror="this.src='https://via.placeholder.com/180x45/060b18/ffffff?text=ERDAS+LOGO'" />
         </a>
-        <p class="footer-about">
+        <p class="footer-about" data-tr="Kocaeli Gebze'de dünya standartlarında polipropilen endüstriyel ambalaj ve Big Bag imalatı." data-en="World-class polypropylene industrial packaging and Big Bag manufacturing in Gebze, Kocaeli.">
           Kocaeli Gebze'de dünya standartlarında polipropilen endüstriyel ambalaj ve Big Bag imalatı.
         </p>
       </div>
 
       <div class="footer-links">
-        <h4>Hızlı Bağlantılar</h4>
+        <h4 data-tr="Hızlı Bağlantılar" data-en="Quick Links">Hızlı Bağlantılar</h4>
         <ul>
-          <li><a href="#anasayfa">Ana Sayfa</a></li>
-          <li><a href="#hakkimizda">Hakkımızda</a></li>
-          <li><a href="#urunler">Ürün Çeşitleri</a></li>
-          <li><a href="#teklif">Fiyat Teklifi</a></li>
+          <li><a href="#anasayfa" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+          <li><a href="#hakkimizda" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
+          <li><a href="#torba-tipleri" data-tr="Ürün Çeşitleri" data-en="Products">Ürün Çeşitleri</a></li>
+          <li><a href="iletisim.html" data-tr="Fiyat Teklifi" data-en="Get a Quote">Fiyat Teklifi</a></li>
         </ul>
       </div>
 
       <div class="footer-contact">
-        <h4>İletişim Bilgileri</h4>
+        <h4 data-tr="İletişim Bilgileri" data-en="Contact Information">İletişim Bilgileri</h4>
         <p><i class="fa-solid fa-location-dot"></i> Gebze / Kocaeli, Türkiye</p>
         <p><i class="fa-solid fa-phone"></i> +90 531 386 66 20</p>
         <p><i class="fa-solid fa-envelope"></i> barumalseyid@gmail.com</p>
@@ -342,17 +249,17 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 Erdaş Big Bag. Tüm Hakları Saklıdır.</p>
+      <p data-tr="© 2026 Erdaş Big Bag. Tüm Hakları Saklıdır." data-en="© 2026 Erdaş Big Bag. All Rights Reserved.">&copy; 2026 Erdaş Big Bag. Tüm Hakları Saklıdır.</p>
     </div>
   </footer>
 
-  <!-- 6. زر الواتساب العائم مع انيميشن النبض -->
+  <!-- 7. زر الواتساب العائم -->
   <a href="https://wa.me/905313866620" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Destek">
     <div class="whatsapp-pulse"></div>
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- 7. كود الجافاسكريبت لحل كل مشاكل الهاتف والنافبار والسلايدر -->
+  <!-- 8. سكريبت الهاتف والترجمة الشاملة والسلايدر -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const menuBtn = document.getElementById('menuBtn');
@@ -361,12 +268,11 @@
       const dropdownItem = document.querySelector('.dropdown-item');
       const dropdownToggle = document.querySelector('.dropdown-toggle');
 
-      // 1. فتح وإغلاق النافبار على الهاتف عند الضغط على زر الهامبرغر
       function toggleMenu() {
         const isOpen = menuBtn.classList.toggle('open');
         navLinks.classList.toggle('active');
         navBackdrop.classList.toggle('active');
-        document.body.style.overflow = isOpen ? 'hidden' : ''; // قفل التمرير عند فتح القائمة
+        document.body.style.overflow = isOpen ? 'hidden' : '';
       }
 
       function closeMenu() {
@@ -379,7 +285,6 @@
       menuBtn.addEventListener('click', toggleMenu);
       navBackdrop.addEventListener('click', closeMenu);
 
-      // 2. التحكم في القائمة المنسدلة (Ürünlerimiz) على الهاتف
       if (dropdownToggle) {
         dropdownToggle.addEventListener('click', (e) => {
           if (window.innerWidth <= 850) {
@@ -390,16 +295,12 @@
         });
       }
 
-      // 3. إغلاق القائمة عند الضغط على أي رابط عادي
       document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(link => {
         link.addEventListener('click', () => {
-          if (window.innerWidth <= 850) {
-            closeMenu();
-          }
+          if (window.innerWidth <= 850) closeMenu();
         });
       });
 
-      // 4. سلايدر الصورتين في الهيرو
       const slides = document.querySelectorAll('.hero-image-box img');
       if (slides.length > 1) {
         let currentIndex = 0;
@@ -411,10 +312,12 @@
       }
     });
 
-    // تبديل اللغة (مثال عملي)
+    // ترجمة الصفحة بالكامل بضغطة زر
     function setLanguage(lang) {
+      document.documentElement.lang = lang;
       document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      
       document.querySelectorAll('[data-' + lang + ']').forEach(el => {
         el.textContent = el.getAttribute('data-' + lang);
       });
