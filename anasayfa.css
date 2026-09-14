@@ -213,16 +213,6 @@ a {
   border-bottom: none !important;
 }
 
-@media (min-width: 851px) {
-  .dropdown-item:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  .dropdown-item:hover .arrow-icon {
-    transform: rotate(180deg);
-  }
-}
 
 /* ================= 3. قسم الهيرو ================= */
 .hero-section {
@@ -566,7 +556,17 @@ a {
 
 /* ================= 7. زر الواتساب العائم ================= */
 /* حاوية تثبيت الأزرار في أسفل يمين الشاشة */
-.floating-contact-actions {
+.call-num-btn {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 99999;
+}
+
+.whats-button {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -575,13 +575,12 @@ a {
   gap: 16px;
   z-index: 99999;
 }
-
 /* التنسيق الأساسي لكلا الزرين */
 .floating-btn {
   position: relative;
   width: 58px;
   height: 58px;
-  border-radius: 50%;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -640,21 +639,6 @@ a {
   }
 }
 
-/* تحسين المقاسات لشاشات الموبايل */
-@media (max-width: 580px) {
-  .floating-contact-actions {
-    bottom: 20px;
-    right: 20px;
-    gap: 12px;
-  }
-
-  .floating-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
-  }
-}
-
 
 @keyframes ripple {
   0% { transform: scale(1); opacity: 0.8; }
@@ -709,27 +693,38 @@ a {
   visibility: visible;
 }
 
-@media (max-width: 992px) {
+/* ================= أكواد الميديا كويري (Responsive Only) ================= */
+
+/* الشاشات المتوسطة واللابتوب الصغير */
+@media (max-width: 1150px) {
   .hero-section {
     height: auto;
+    padding: 60px 0;
   }
+
   .hero-image-box {
     width: 100%;
+    max-width: 500px;
     height: 380px;
   }
+
   .erdas-showcase-section {
     height: auto;
+    padding: 60px 0;
   }
+
   .erdas-bags-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 35px 20px;
+    gap: 35px;
   }
+
   .bag-render-view {
-    height: 380px;
+    height: 420px;
   }
 }
 
-@media (max-width: 850px) {
+/* الأجهزة اللوحية (التابلت) وفتح القائمة الجانبية */
+@media (max-width: 992px) {
   .menu-btn {
     display: block;
   }
@@ -737,19 +732,17 @@ a {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 275px;
+    right: -100%;
+    width: 280px;
     height: 100vh;
-    height: 100dvh;
-    background-color: #ffffff;
-    box-shadow: -6px 0 25px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
     flex-direction: column;
     align-items: flex-start;
     padding: 90px 24px 30px;
     gap: 12px;
-    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1001;
-    display: flex !important;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
     overflow-y: auto;
   }
 
@@ -765,11 +758,14 @@ a {
     display: block;
     width: 100%;
     padding: 10px 0;
-    font-size: 16.5px;
+    border-bottom: 1px solid var(--border-color);
   }
 
-  .nav-links a:hover {
-    border-bottom: none;
+  .nav-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .submenu {
@@ -779,34 +775,59 @@ a {
     transform: none;
     box-shadow: none;
     border: none;
-    border-left: 3px solid var(--primary-blue);
-    border-radius: 0;
-    background: #f8fafc;
+    padding-left: 15px;
     display: none;
-    padding: 6px 14px;
-    margin: 4px 0 8px;
   }
 
-  .dropdown-item.open .submenu {
+  .dropdown-item:hover .submenu,
+  .dropdown-item.active .submenu {
     display: block;
-  }
-
-  .dropdown-item.open .arrow-icon {
-    transform: rotate(180deg);
-  }
-
-  .nav-btn {
-    text-align: center;
-    margin-top: 10px;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image-box {
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* الهواتف الذكية العادية */
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 10px 0;
+  }
+
+  .top-bar-content {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .top-info {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero-text h1 {
-    font-size: 32px;
+    font-size: 34px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
   }
 
   .solutions-grid {
@@ -816,25 +837,65 @@ a {
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 }
 
+/* الهواتف الصغيرة */
 @media (max-width: 580px) {
-  .erdas-bags-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-  
-  .bag-render-view {
-    height: 280px;
+  .nav-content {
+    height: 75px;
   }
 
-  .floating-whatsapp {
-    width: 52px;
-    height: 52px;
+  .header-logo-img {
+    height: 48px;
+  }
+
+  .hero-text h1 {
     font-size: 26px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-image-box {
+    height: 260px;
+  }
+
+  .erdas-bags-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .bag-render-view {
+    height: 340px;
+  }
+
+  .floating-contact-actions {
     bottom: 20px;
     right: 20px;
+    gap: 12px;
   }
+
+  .floating-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .top-bar-location {
+    display: none;
+  }
+
+  .badge {
+    font-size: 10px;
+  }
+
+  .top-bar-content {
+    display: flex;
+    flex-direction: row;
+  }
+
 }
