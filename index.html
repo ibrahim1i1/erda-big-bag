@@ -20,7 +20,7 @@
     <div class="container top-bar-content">
       <div class="top-info">
         <span class="top-bar-location"><i class="fa-solid fa-location-dot"></i> <span data-tr="Gebze / Kocaeli, Türkiye" data-en="Gebze / Kocaeli, Turkey">Gebze / Kocaeli, Türkiye</span></span>
-        <span class="badge"><i class="fa-solid fa-phone"></i><a href="mailto:barumalseyid@gmail.com">barumalseyid@gmail.com</a></span>
+        <span class="badge"><i class="fa-solid fa-envelope"></i><a href="mailto:barumalseyid@gmail.com">barumalseyid@gmail.com</a></span>
       </div>
       <div class="lang-switch">
         <i class="fa-solid fa-globe"></i>
@@ -40,7 +40,7 @@
         <img src="images/logo.png" alt="Erdaş Big Bag" class="header-logo-img" onerror="this.src='https://via.placeholder.com/220x60/060b18/ffffff?text=ERDAS+LOGO'" />
       </a>
 
-      <!-- زر القائمة للهاتف (يتحول إلى X) -->
+      <!-- زر القائمة للهاتف -->
       <button class="menu-btn" id="menuBtn" aria-label="Menüyü Aç/Kapat">
         <span></span>
         <span></span>
@@ -108,7 +108,7 @@
     </div>
   </section>
 
-  <!-- 4. سكشن موديلات الأكياس الأربعة (مربوط بالمعرفات IDs بدقة) -->
+  <!-- 4. سكشن موديلات الأكياس الأربعة -->
   <section class="erdas-showcase-section" id="torba-tipleri">
     <div class="container">
       
@@ -122,7 +122,7 @@
           <div class="bag-render-view">
             <img src="images/standart-big-bag.png" alt="Standart Torba" onerror="this.src='https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&auto=format&fit=crop&q=80'" />
           </div>
-          <a href="iletisim.html" class="btn-clean-incele" data-tr="İncele" data-en="Inspect">İncele</a>
+          <a href="standart-4-kulplu-torba.html" class="btn-clean-incele" data-tr="İncele" data-en="Inspect">İncele</a>
         </div>
 
         <!-- 2. Q Torba -->
@@ -163,7 +163,7 @@
     </div>
   </section>
 
-  <!-- 5. سكشن حلول تصنيع الـ Big Bag الصناعي (Hakkımızda) -->
+  <!-- 5. سكشن حلول تصنيع الـ Big Bag الصناعي -->
   <section class="solutions-section" id="hakkimizda">
     <div class="container">
 
@@ -206,26 +206,20 @@
     </div>
   </section>
 
-  <!-- حاوية الأزرار العائمة (واتساب + اتصال) -->
-<div class="floating-contact-actions">
-  
-  <!-- زر الاتصال الهاتفي -->
-   <div class="call-num-btn">
+  <!-- أزرار التواصل العائمة -->
+  <div class="call-num-btn">
     <a href="tel:+905313866620" class="floating-btn btn-call" aria-label="Hemen Ara">
       <div class="pulse-wave pulse-call"></div>
       <i class="fa-solid fa-phone"></i>
     </a>
   </div>
 
-  <!-- زر الواتساب -->
-   <div class="whats-button">
+  <div class="whats-button">
     <a href="https://wa.me/905313866620" class="floating-btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Destek">
       <div class="pulse-wave pulse-whatsapp"></div>
       <i class="fa-brands fa-whatsapp"></i>
     </a>
   </div>
-
-</div>
 
   <!-- 6. الفوتر -->
   <footer class="main-footer">
@@ -264,8 +258,7 @@
     </div>
   </footer>
 
-
-  <!-- 8. سكريبت الهاتف والترجمة الشاملة والسلايدر -->
+  <!-- السكريبت المحدث والمنسق بالكامل -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const menuBtn = document.getElementById('menuBtn');
@@ -285,6 +278,7 @@
         menuBtn.classList.remove('open');
         navLinks.classList.remove('active');
         navBackdrop.classList.remove('active');
+        if (dropdownItem) dropdownItem.classList.remove('active');
         document.body.style.overflow = '';
       }
 
@@ -293,17 +287,17 @@
 
       if (dropdownToggle) {
         dropdownToggle.addEventListener('click', (e) => {
-          if (window.innerWidth <= 850) {
+          if (window.innerWidth <= 992) {
             e.preventDefault();
             e.stopPropagation();
-            dropdownItem.classList.toggle('open');
+            dropdownItem.classList.toggle('active');
           }
         });
       }
 
       document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(link => {
         link.addEventListener('click', () => {
-          if (window.innerWidth <= 850) closeMenu();
+          if (window.innerWidth <= 992) closeMenu();
         });
       });
 
@@ -318,7 +312,6 @@
       }
     });
 
-    // ترجمة الصفحة بالكامل بضغطة زر
     function setLanguage(lang) {
       document.documentElement.lang = lang;
       document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
