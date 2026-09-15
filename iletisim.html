@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hakkımızda & Üretim Tesisimiz | ERDAŞ Big Bag</title>
+  <title>İletişim & Fiyat Teklifi | ERDAŞ Big Bag</title>
 
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* ================= الألوان والمتغيرات ================= */
     :root {
       --bg-main: #f8fafc;
       --text-dark: #0f172a;
@@ -24,6 +23,8 @@
       --accent-green: #25d366;
       --border-color: #e2e8f0;
       --white: #ffffff;
+      --success-green: #16a34a;
+      --error-red: #dc2626;
     }
 
     *, *::before, *::after {
@@ -174,7 +175,6 @@
       border-bottom: none !important;
     }
 
-    /* القائمة المنسدلة */
     .dropdown-item {
       position: relative;
     }
@@ -243,169 +243,349 @@
       transform: rotate(180deg);
     }
 
-    /* ================= 3. سكشن التعريف بالمصنع ================= */
-    .factory-about-section {
-      padding: 85px 0;
-      background-color: #ffffff;
-      flex: 1;
+    /* ================= 3. ترويسة صفحة التواصل ================= */
+    .contact-page-header {
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      padding: 55px 0 35px;
+      border-bottom: 1px solid var(--border-color);
+      text-align: center;
     }
 
-    .factory-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.25fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .factory-media {
-      position: relative;
-    }
-
-    .factory-image-card {
-      position: relative;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 16px 36px rgba(6, 11, 24, 0.08);
-      border: 1px solid var(--border-color);
-      background-color: var(--bg-main);
-    }
-
-    .factory-image-card img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .factory-experience-badge {
-      position: absolute;
-      bottom: 24px;
-      left: 24px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      border: 1px solid var(--border-color);
-      padding: 14px 22px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .badge-number {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--primary-blue);
-      line-height: 1;
-    }
-
-    .badge-title strong {
-      display: block;
-      font-size: 14.5px;
-      color: var(--dark-navy);
-    }
-
-    .badge-title span {
-      font-size: 12.5px;
-      color: var(--text-muted);
-    }
-
-    .factory-tag {
+    .contact-page-tag {
       display: inline-block;
       background-color: #e0f2fe;
       color: var(--primary-blue);
       font-size: 13px;
       font-weight: 700;
-      padding: 4px 12px;
+      padding: 4px 14px;
       border-radius: 6px;
       text-transform: uppercase;
       margin-bottom: 12px;
       letter-spacing: 0.5px;
     }
 
-    .factory-heading {
-      font-size: 34px;
+    .contact-page-title {
+      font-size: 36px;
       font-weight: 800;
-      line-height: 1.25;
       color: var(--dark-navy);
-      margin-bottom: 18px;
-      letter-spacing: -0.4px;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
     }
 
-    .factory-text {
-      font-size: 15.5px;
+    .contact-page-desc {
+      font-size: 16px;
       color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 28px;
+      max-width: 650px;
+      margin: 0 auto;
     }
 
-    .factory-points-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin-bottom: 32px;
+    /* ================= 4. سكشن الخريطة في الأعلى ================= */
+    .map-section {
+      padding: 35px 0 20px;
     }
 
-    .factory-point-item {
-      background-color: var(--bg-main);
+    .map-wrapper-card {
+      background: #ffffff;
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 16px 18px;
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
+      border-radius: 18px;
+      padding: 12px;
+      box-shadow: 0 8px 24px rgba(6, 11, 24, 0.04);
+      overflow: hidden;
     }
 
-    .point-icon {
+    .map-header-bar {
+      padding: 10px 14px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 12px;
+    }
+
+    .map-header-bar h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--dark-navy);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .map-header-bar h3 i {
+      color: var(--primary-blue);
+    }
+
+    .map-header-bar span {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    .map-frame-holder {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .map-frame-holder iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ================= 5. قسم فورم التواصل والمعلومات ================= */
+    .contact-section {
+      padding: 25px 0 85px;
+      flex: 1;
+    }
+
+    .contact-main-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.3fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .contact-info-block {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding-top: 6px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .info-row i {
+      font-size: 20px;
+      color: var(--primary-blue);
+      margin-top: 3px;
+      flex-shrink: 0;
+      width: 24px;
+      text-align: center;
+    }
+
+    .info-text strong {
+      display: block;
+      font-size: 15px;
+      color: var(--dark-navy);
+      margin-bottom: 3px;
+      font-weight: 700;
+    }
+
+    .info-text p,
+    .info-text a {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .info-text a:hover {
+      color: var(--primary-blue);
+    }
+
+    .contact-form-box {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 35px 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .form-two-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-field {
+      width: 100%;
+      padding: 13px 16px;
+      font-size: 14.5px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      outline: none;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .form-field:focus {
+      background-color: #ffffff;
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+    }
+
+    .form-field::placeholder {
+      color: #94a3b8;
+    }
+
+    textarea.form-field {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .form-submit-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 4px;
+    }
+
+    .btn-send-message {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 13px 42px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-send-message:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-send-message:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    /* ================= 6. Toast Notification ================= */
+    .toast-popup {
+      position: fixed;
+      top: 25px;
+      left: 50%;
+      transform: translate(-50%, -40px) scale(0.92);
+      background: #ffffff;
+      min-width: 320px;
+      max-width: 480px;
+      width: 90%;
+      padding: 16px 20px 18px;
+      border-radius: 14px;
+      box-shadow: 0 20px 45px -10px rgba(6, 11, 24, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      z-index: 999999;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      overflow: hidden;
+    }
+
+    .toast-popup.show {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translate(-50%, 0) scale(1);
+    }
+
+    .toast-icon-wrap {
       width: 40px;
       height: 40px;
-      border-radius: 10px;
-      background-color: #ffffff;
-      color: var(--primary-blue);
-      border: 1px solid var(--border-color);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 18px;
       flex-shrink: 0;
+      margin-top: 2px;
     }
 
-    .point-info h4 {
-      font-size: 14.5px;
+    .toast-popup.success .toast-icon-wrap {
+      background-color: #dcfce7;
+      color: var(--success-green);
+    }
+    .toast-popup.success {
+      border-left: 4px solid var(--success-green);
+    }
+
+    .toast-popup.error .toast-icon-wrap {
+      background-color: #fee2e2;
+      color: var(--error-red);
+    }
+    .toast-popup.error {
+      border-left: 4px solid var(--error-red);
+    }
+
+    .toast-text {
+      flex: 1;
+    }
+
+    .toast-text h4 {
+      font-size: 16px;
       font-weight: 700;
       color: var(--dark-navy);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
-    .point-info p {
-      font-size: 13px;
+    .toast-text p {
+      font-size: 14px;
       color: var(--text-muted);
       line-height: 1.45;
-      margin: 0;
     }
 
-    .btn {
-      padding: 14px 28px;
-      border-radius: 9px;
-      font-weight: 700;
-      font-size: 15.5px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s;
+    .toast-close-btn {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0 4px;
     }
 
-    .btn-primary {
-      background: var(--primary-blue);
-      color: #ffffff;
+    .toast-progress-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: #e2e8f0;
     }
 
-    .btn-primary:hover {
-      background: #026ca3;
-      transform: translateY(-2px);
+    .toast-progress-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
     }
 
-    /* ================= 4. الفوتر ================= */
+    .toast-popup.success .toast-progress-bar::before {
+      background-color: var(--success-green);
+    }
+
+    .toast-popup.error .toast-progress-bar::before {
+      background-color: var(--error-red);
+    }
+
+    .toast-popup.show .toast-progress-bar::before {
+      animation: progressCountdown 5s linear forwards;
+    }
+
+    @keyframes progressCountdown {
+      from { width: 100%; }
+      to { width: 0%; }
+    }
+
+    /* ================= 7. الفوتر ================= */
     .main-footer {
       background: var(--dark-navy);
       color: #94a3b8;
@@ -479,7 +659,7 @@
       font-size: 13.5px;
     }
 
-    /* ================= 5. أزرار التواصل العائمة ================= */
+    /* ================= 8. أزرار التواصل العائمة ================= */
     .call-num-btn {
       position: fixed;
       bottom: 25px;
@@ -540,21 +720,12 @@
     }
 
     @keyframes floatingPulse {
-      0% {
-        transform: scale(1);
-        opacity: 0.75;
-      }
-      70% {
-        transform: scale(1.6);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1.6);
-        opacity: 0;
-      }
+      0% { transform: scale(1); opacity: 0.75; }
+      70% { transform: scale(1.6); opacity: 0; }
+      100% { transform: scale(1.6); opacity: 0; }
     }
 
-    /* ================= 6. تجاوب الشاشات ================= */
+    /* ================= 9. تجاوب الشاشات ================= */
     .menu-btn {
       display: none;
       width: 32px;
@@ -660,21 +831,9 @@
         display: block;
       }
 
-      .factory-about-section {
-        padding: 60px 0;
-      }
-
-      .factory-grid {
+      .contact-main-grid {
         grid-template-columns: 1fr;
         gap: 40px;
-      }
-
-      .factory-image-card img {
-        height: 380px;
-      }
-
-      .factory-heading {
-        font-size: 28px;
       }
 
       .footer-grid {
@@ -692,6 +851,28 @@
         display: none;
       }
 
+      .contact-page-title {
+        font-size: 28px;
+      }
+
+      .map-frame-holder {
+        height: 300px;
+      }
+
+      .form-two-cols {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .form-submit-row {
+        justify-content: stretch;
+      }
+
+      .btn-send-message {
+        width: 100%;
+        justify-content: center;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -707,24 +888,14 @@
         height: 48px;
       }
 
-      .factory-heading {
-        font-size: 24px;
+      .contact-form-box {
+        padding: 24px 18px;
       }
 
-      .factory-points-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-
-      .factory-image-card img {
-        height: 280px;
-      }
-
-      .factory-experience-badge {
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
-        padding: 10px 16px;
+      .map-header-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
       }
 
       .call-num-btn {
@@ -779,7 +950,7 @@
 
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
-        <li><a href="hakkimizda.html" class="active" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
+        <li><a href="hakkimizda.html" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
         
         <li class="dropdown-item">
           <div class="dropdown-toggle">
@@ -795,7 +966,7 @@
           </ul>
         </li>
 
-        <li><a href="iletisim.html" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+        <li><a href="iletisim.html" class="active" data-tr="İletişim" data-en="Contact">İletişim</a></li>
         <li><a href="iletisim.html" class="nav-btn" data-tr="Fiyat Teklifi Al" data-en="Get a Quote">Fiyat Teklifi Al</a></li>
       </ul>
 
@@ -805,85 +976,166 @@
   <!-- طبقة التعتيم للموبايل -->
   <div class="nav-backdrop" id="navBackdrop"></div>
 
-  <!-- 3. سكشن التعريف بالمصنع -->
-  <main class="factory-about-section">
+  <!-- 3. ترويسة الصفحة -->
+  <section class="contact-page-header">
     <div class="container">
-      <div class="factory-grid">
+      <span class="contact-page-tag" data-tr="Bize Ulaşın" data-en="Contact Us">Bize Ulaşın</span>
+      <h1 class="contact-page-title" data-tr="İletişim & Hızlı Fiyat Teklifi" data-en="Contact & Instant Quote Request">İletişim &amp; Hızlı Fiyat Teklifi</h1>
+      <p class="contact-page-desc" data-tr="Ürün talepleriniz, toptan alımlar ve teknik detaylar için formu doldurabilir ya da doğrudan bizimle iletişime geçebilirsiniz." data-en="For product inquiries, bulk orders, and technical specs, fill out the form or reach out directly to our team.">
+        Ürün talepleriniz, toptan alımlar ve teknik detaylar için formu doldurabilir ya da doğrudan bizimle iletişime geçebilirsiniz.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4. قسم الخريطة التفاعلية في الأعلى -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-wrapper-card">
+        <div class="map-header-bar">
+          <h3>
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span data-tr="Tesis Konumumuz" data-en="Our Plant Location">Tesis Konumumuz</span>
+          </h3>
+          <span data-tr="Gebze / Kocaeli Sanayi Bölgesi" data-en="Gebze / Kocaeli Industrial Zone">Gebze / Kocaeli Sanayi Bölgesi</span>
+        </div>
+        <div class="map-frame-holder">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96574.62955523956!2d29.35105267156942!3d40.80371661647464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb2079f82d1c67%3A0x6b4be9e4b6eb35d5!2sGebze%2C%20Kocaeli!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="ERDAŞ Big Bag Konum Haritası">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. قسم فورم التواصل والمعلومات -->
+  <main class="contact-section">
+    <div class="container">
+      <div class="contact-main-grid">
         
-        <!-- معرض وصورة المصنع -->
-        <div class="factory-media">
-          <div class="factory-image-card">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&auto=format&fit=crop&q=80" alt="ERDAŞ Big Bag Fabrika Üretim Hattı" onerror="this.src='https://placehold.co/700x550?text=ERDAS+Uretim+Tesisi'" />
-            
-            <div class="factory-experience-badge">
-              <span class="badge-number">100%</span>
-              <div class="badge-title">
-                <strong data-tr="Yerli Üretim" data-en="Domestic Production">Yerli Üretim</strong>
-                <span data-tr="Gebze Tesisleri" data-en="Gebze Facility">Gebze Tesisleri</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- نصوص التعريف بالمصنع وخطوط الإنتاج -->
-        <div class="factory-details">
-          <span class="factory-tag" data-tr="Üretim Tesisimiz" data-en="Our Manufacturing Plant">Üretim Tesisimiz</span>
-          <h1 class="factory-heading" data-tr="Gebze'deki Modern Tesisimizde Güçlü ve Güvenli Big Bag Üretimi" data-en="Robust & Reliable Big Bag Manufacturing at Our Gebze Plant">
-            Gebze'deki Modern Tesisimizde Güçlü ve Güvenli Big Bag Üretimi
-          </h1>
+        <!-- معلومات التواصل المباشرة -->
+        <div class="contact-info-block">
           
-          <p class="factory-text" data-tr="ERDAŞ Big Bag fabrikası, Kocaeli Gebze sanayi bölgesindeki entegre tesisinde endüstriyel ambalaj sektörüne yön vermektedir. Yüksek mukavemetli polipropilen (PP) dokuma kumaşları modern kesim ve dikiş parkurumuzda işleyerek; maden, kimya, inşaat ve tarım sanayisinin ağır yük taşıma ihtiyaçlarına tam uyumlu çözümler üretiyoruz." data-en="Operating in the Kocaeli Gebze industrial zone, ERDAŞ Big Bag leads the bulk packaging sector with its integrated production lines. Processing high-tensile polypropylene woven fabrics through advanced cutting and sewing lines, we engineer heavy-duty FIBC bags tailored for mining, chemicals, construction, and agriculture.">
-            ERDAŞ Big Bag fabrikası, Kocaeli Gebze sanayi bölgesindeki entegre tesisinde endüstriyel ambalaj sektörüne yön vermektedir. Yüksek mukavemetli polipropilen (PP) dokuma kumaşları modern kesim ve dikiş parkurumuzda işleyerek; maden, kimya, inşaat ve tarım sanayisinin ağır yük taşıma ihtiyaçlarına tam uyumlu çözümler üretiyoruz.
-          </p>
-
-          <div class="factory-points-grid">
-            
-            <div class="factory-point-item">
-              <div class="point-icon"><i class="fa-solid fa-industry"></i></div>
-              <div class="point-info">
-                <h4 data-tr="Gelişmiş Dikiş Parkuru" data-en="Advanced Stitching Lines">Gelişmiş Dikiş Parkuru</h4>
-                <p data-tr="Güçlendirilmiş kolon dikişleri, sızdırmaz fitil uygulamaları ve özel ebatlama." data-en="Reinforced loop stitching, dust-proof sealing cords, and precision custom sizing.">Güçlendirilmiş kolon dikişleri, sızdırmaz fitil uygulamaları ve özel ebatlama.</p>
-              </div>
+          <div class="info-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="info-text">
+              <strong data-tr="Fabrika & Ofis Adresi:" data-en="Factory & Office Address:">Fabrika &amp; Ofis Adresi:</strong>
+              <p data-tr="Gebze Sanayi Bölgesi, Kocaeli / Türkiye" data-en="Gebze Industrial Zone, Kocaeli / Turkey">Gebze Sanayi Bölgesi, Kocaeli / Türkiye</p>
             </div>
-
-            <div class="factory-point-item">
-              <div class="point-icon"><i class="fa-solid fa-microscope"></i></div>
-              <div class="point-info">
-                <h4 data-tr="Sıkı Kalite Kontrol" data-en="Strict Quality Control">Sıkı Kalite Kontrol</h4>
-                <p data-tr="5:1 ve 6:1 uluslararası emniyet katsayılarına göre test edilen güvenli taşıma kapasitesi." data-en="Safe working load capacity rigorously tested against 5:1 and 6:1 safety factors.">5:1 ve 6:1 uluslararası emniyet katsayılarına göre test edilen güvenli taşıma kapasitesi.</p>
-              </div>
-            </div>
-
-            <div class="factory-point-item">
-              <div class="point-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
-              <div class="point-info">
-                <h4 data-tr="Hızlı Teslimat & Kapasite" data-en="Fast Delivery & Volume">Hızlı Teslimat &amp; Kapasite</h4>
-                <p data-tr="Sanayinin kalbi Gebze'den Türkiye'nin her yerine hızlı lojistik ve sevkiyat ağı." data-en="Direct logistics and rapid dispatch across all industrial zones from Gebze.">Sanayinin kalbi Gebze'den Türkiye'nin her yerine hızlı lojistik ve sevkiyat ağı.</p>
-              </div>
-            </div>
-
-            <div class="factory-point-item">
-              <div class="point-icon"><i class="fa-solid fa-recycle"></i></div>
-              <div class="point-info">
-                <h4 data-tr="Çevre ve UV Direnci" data-en="Eco & UV Durability">Çevre ve UV Direnci</h4>
-                <p data-tr="Açık alanda depolamaya uygun UV dayanımlı, geri dönüştürülebilir PP hammaddeler." data-en="Recyclable PP materials with UV stabilization designed for prolonged outdoor storage.">Açık alanda depolamaya uygun UV dayanımlı, geri dönüştürülebilir PP hammaddeler.</p>
-              </div>
-            </div>
-
           </div>
 
-          <div class="factory-action-row">
-            <a href="iletisim.html" class="btn btn-primary">
-              <i class="fa-solid fa-envelope"></i>
-              <span data-tr="Fabrika İle İletişime Geçin" data-en="Contact Our Plant">Fabrika İle İletişime Geçin</span>
-            </a>
+          <div class="info-row">
+            <i class="fa-solid fa-phone"></i>
+            <div class="info-text">
+              <strong data-tr="Telefon:" data-en="Phone:">Telefon:</strong>
+              <a href="tel:+905313866620">+90 531 386 66 20</a>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="info-text">
+              <strong data-tr="E-posta:" data-en="Email:">E-posta:</strong>
+              <a href="mailto:barumalseyid@gmail.com">barumalseyid@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <i class="fa-solid fa-clock"></i>
+            <div class="info-text">
+              <strong data-tr="Çalışma Saatleri:" data-en="Working Hours:">Çalışma Saatleri:</strong>
+              <p data-tr="Pazartesi - Cumartesi: 08:00 - 18:00" data-en="Monday - Saturday: 08:00 - 18:00">Pazartesi - Cumartesi: 08:00 - 18:00</p>
+            </div>
           </div>
 
         </div>
+
+        <!-- نموذج Web3Forms -->
+        <form class="contact-form-box" id="contactForm">
+          <input type="hidden" name="access_key" value="889d83af-ef3d-4a01-9166-7c98dbb5849a" />
+          <input type="hidden" name="from_name" value="ERDAŞ Web Sitesi İletişim Formu" />
+          <input type="hidden" name="subject" value="Yeni İletişim & Fiyat Teklifi Mesajı (ERDAŞ)" />
+          <input type="checkbox" name="botcheck" style="display: none;" />
+
+          <div class="form-two-cols">
+            <input
+              type="text"
+              name="name"
+              class="form-field"
+              placeholder="Adınız *"
+              data-tr-placeholder="Adınız *"
+              data-en-placeholder="Your Name *"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              class="form-field"
+              placeholder="Telefon Numaranız *"
+              data-tr-placeholder="Telefon Numaranız *"
+              data-en-placeholder="Phone Number *"
+              required
+            />
+          </div>
+
+          <div class="form-two-cols">
+            <input
+              type="email"
+              name="email"
+              class="form-field"
+              placeholder="E-posta Adresiniz *"
+              data-tr-placeholder="E-posta Adresiniz *"
+              data-en-placeholder="Email Address *"
+              required
+            />
+           <input 
+              type="text" 
+              name="konu" 
+              class="form-field" 
+              placeholder="Konu *" 
+              data-tr-placeholder="Konu *" 
+              data-en-placeholder="Subject *" 
+              required 
+            />
+          </div>
+
+          <textarea
+            name="message"
+            class="form-field"
+            rows="5"
+            placeholder="Mesajınız veya Teklif Detayları (Ölçü, Taşıma Kapasitesi, Adet vb.) *"
+            data-tr-placeholder="Mesajınız veya Teklif Detayları (Ölçü, Taşıma Kapasitesi, Adet vb.) *"
+            data-en-placeholder="Your Message or Inquiry Details (Dimensions, Capacity, Quantity etc.) *"
+            required
+          ></textarea>
+
+          <div class="form-submit-row">
+            <button type="submit" class="btn-send-message" id="submitBtn">
+              <span data-tr="Mesajı Gönder" data-en="Send Message">Mesajı Gönder</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
 
       </div>
     </div>
   </main>
+
+  <!-- صندوق الإشعار (Toast Notification) -->
+  <div class="toast-popup" id="toastNotification">
+    <div class="toast-icon-wrap" id="toastIcon">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="toast-text">
+      <h4 id="toastTitle">Başarılı!</h4>
+      <p id="toastMessage">Mesajınız başarıyla iletildi.</p>
+    </div>
+    <button class="toast-close-btn" id="toastCloseBtn">&times;</button>
+    <div class="toast-progress-bar"></div>
+  </div>
 
   <!-- أزرار التواصل العائمة -->
   <div class="call-num-btn">
@@ -900,7 +1152,7 @@
     </a>
   </div>
 
-  <!-- 4. الفوتر -->
+  <!-- 7. الفوتر -->
   <footer class="main-footer">
     <div class="container footer-grid">
       
@@ -937,9 +1189,12 @@
     </div>
   </footer>
 
-  <!-- 5. السكريبت -->
+  <!-- 8. السكريبت -->
   <script>
+    let currentLang = 'tr';
+
     document.addEventListener('DOMContentLoaded', () => {
+      // 1. فتح وإغلاق قائمة الهاتف
       const menuBtn = document.getElementById('menuBtn');
       const navLinks = document.getElementById('navLinks');
       const navBackdrop = document.getElementById('navBackdrop');
@@ -979,18 +1234,109 @@
           if (window.innerWidth <= 992) closeMenu();
         });
       });
+
+      // 2. إرسال الفورم عبر Web3Forms
+      const contactForm = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          submitBtn.disabled = true;
+          const originalBtnText = submitBtn.innerHTML;
+          submitBtn.innerHTML = currentLang === 'tr' ? 'Gönderiliyor...' : 'Sending...';
+
+          const formData = new FormData(contactForm);
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: json
+          })
+          .then(async (response) => {
+            let res = await response.json();
+            if (response.status == 200) {
+              const successTitle = currentLang === 'tr' ? 'Başarılı!' : 'Success!';
+              const successMsg = currentLang === 'tr' ? 'Mesajınız başarıyla iletildi. En kısa sürede dönüş yapacağız.' : 'Your message has been sent successfully. We will get back to you soon.';
+              showToast('success', successTitle, successMsg);
+              contactForm.reset();
+            } else {
+              const errTitle = currentLang === 'tr' ? 'Hata!' : 'Error!';
+              const errMsg = res.message || (currentLang === 'tr' ? 'Bir sorun oluştu. Lütfen tekrar deneyin.' : 'Something went wrong. Please try again.');
+              showToast('error', errTitle, errMsg);
+            }
+          })
+          .catch((error) => {
+            const errTitle = currentLang === 'tr' ? 'Hata!' : 'Error!';
+            const errMsg = currentLang === 'tr' ? 'Bağlantı hatası oluştu.' : 'Connection error occurred.';
+            showToast('error', errTitle, errMsg);
+          })
+          .then(function () {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          });
+        });
+      }
     });
 
+    // 3. التحكم في الإشعار العائم
+    let toastTimeout = null;
+    function showToast(type, title, message) {
+      const toast = document.getElementById('toastNotification');
+      const toastIcon = document.getElementById('toastIcon');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastMessage = document.getElementById('toastMessage');
+      const toastCloseBtn = document.getElementById('toastCloseBtn');
+
+      clearTimeout(toastTimeout);
+
+      toast.className = 'toast-popup ' + type;
+      toastTitle.textContent = title;
+      toastMessage.textContent = message;
+
+      if (type === 'success') {
+        toastIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+      } else {
+        toastIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+      }
+
+      toast.classList.add('show');
+
+      toastCloseBtn.onclick = () => {
+        toast.classList.remove('show');
+      };
+
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 5000);
+    }
+
+    // 4. تبديل اللغة (TR / EN)
     function setLanguage(lang) {
+      currentLang = lang;
       document.documentElement.lang = lang;
-      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
-      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      
+
+      const btnTr = document.getElementById('btn-tr');
+      const btnEn = document.getElementById('btn-en');
+      if (btnTr && btnEn) {
+        btnTr.classList.toggle('active', lang === 'tr');
+        btnEn.classList.toggle('active', lang === 'en');
+      }
+
       document.querySelectorAll('[data-' + lang + ']').forEach(el => {
         el.textContent = el.getAttribute('data-' + lang);
+      });
+
+      document.querySelectorAll('[data-' + lang + '-placeholder]').forEach(el => {
+        el.placeholder = el.getAttribute('data-' + lang + '-placeholder');
       });
     }
   </script>
 
 </body>
-</html>
+</html>     
