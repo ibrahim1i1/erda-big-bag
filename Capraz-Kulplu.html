@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>İletişim - ERDAŞ Big Bag</title>
+  <title>Çapraz Kulplu Big Bag | ERDAŞ Big Bag</title>
 
-  <!-- أيقونات FontAwesome والخط الرسمي -->
+  <!--=============================FontAwesome ==============================-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="standart-4-kulplu-torba.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -53,7 +54,7 @@
       color: inherit;
     }
 
-    /* الإشعار العائم (Toast Notification) */
+    /*=========================(Toast Notification)  ======================= */
     .toast-popup {
       position: fixed;
       top: 25px;
@@ -223,7 +224,7 @@
       font-weight: 800;
     }
 
-    /* النافبار مع نفس الارتفاع والأنيميشن */
+    /* ========================= navbar ======================================*/
     .main-header {
       background: #ffffff;
       border-bottom: 1px solid var(--border-color);
@@ -266,6 +267,78 @@
     .nav-links a.active {
       color: var(--primary-blue);
       border-bottom: solid 3px var(--primary-blue);
+    }
+
+    /* القائمة المنسدلة (Ürünlerimiz) */
+    .dropdown-item {
+      position: relative;
+    }
+
+    .dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--text-dark);
+      cursor: pointer;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-item.active .dropdown-toggle,
+    .dropdown-toggle:hover {
+      color: var(--primary-blue);
+      border-bottom: solid 3px var(--primary-blue);
+    }
+
+    .arrow-icon {
+      font-size: 12px;
+      transition: transform 0.25s ease;
+    }
+
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 250px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+      padding: 8px 0;
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+      z-index: 200;
+    }
+
+    .submenu li a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 15px;
+      color: var(--text-dark);
+      border-bottom: none !important;
+    }
+
+    .submenu li a:hover,
+    .submenu li a.active-sub {
+      background: #f0f9ff;
+      color: var(--primary-blue);
+      padding-left: 24px;
+      border-bottom: none !important;
+    }
+
+    .dropdown-item:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-item:hover .arrow-icon {
+      transform: rotate(180deg);
     }
 
     .nav-btn {
@@ -314,34 +387,159 @@
     .menu-btn.open span:nth-child(2) { opacity: 0; }
     .menu-btn.open span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
 
-    /* الخريطة الموسطة والفورم */
-    .contact-page-section {
-      padding: 35px 0 70px;
-      flex: 1;
+    /*================= (Standart 4 Kulplu Big Bag) ================= */
+    .product-detail-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      height: 65vh;
     }
 
-    .map-center-container {
+    .product-top-header {
+      margin-bottom: 25px;
+    }
+
+    .product-main-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .product-grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .product-media-wrapper {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    }
+
+    .product-media-wrapper img {
       width: 100%;
-      max-width: 680px;
-      height: 300px;
-      margin: 0 auto 45px auto;
+      max-height: 480px;
+      object-fit: contain;
+    }
+
+    .product-specs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .spec-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      padding: 16px 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
     }
 
-    .map-center-container iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
+    .spec-card.highlight {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
     }
 
+    .spec-icon {
+      background: #f1f5f9;
+      color: #0284c7;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .spec-card.highlight .spec-icon {
+      background: #dcfce7;
+      color: #16a34a;
+    }
+
+    .spec-body h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .spec-body p {
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .spec-note {
+      font-size: 12px;
+      color: #64748b;
+      margin-left: 6px;
+    }
+
+    .spec-features-list {
+      margin: 6px 0 0 18px;
+      padding: 0;
+      color: #475569;
+      font-size: 14px;
+    }
+
+    .spec-features-list li {
+      margin-bottom: 4px;
+    }
+
+    .product-quick-actions {
+      display: flex;
+      gap: 14px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .spec-action-btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .spec-action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .wa-btn {
+      background: #25d366;
+      color: #ffffff !important;
+    }
+
+    .call-btn {
+      background: #0284c7;
+      color: #ffffff !important;
+    }
+
+    /*=============================contact form ===================================*/
     .contact-main-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.3fr;
       gap: 50px;
       align-items: start;
+      height: 45vh;
     }
 
     .contact-info-block {
@@ -451,97 +649,7 @@
       cursor: not-allowed;
     }
 
-    /* حاوية تثبيت الأزرار في أسفل يمين الشاشة */
-.floating-contact-actions {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  z-index: 99999;
-}
-
-/* التنسيق الأساسي لكلا الزرين */
-.floating-btn {
-  position: relative;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff !important;
-  font-size: 26px;
-  text-decoration: none;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.floating-btn:hover {
-  transform: scale(1.12);
-}
-
-/* زر الواتساب */
-.btn-whatsapp {
-  background-color: #25d366;
-}
-
-/* زر الاتصال الهاتفي */
-.btn-call {
-  background-color: #0284c7;
-}
-
-/* طبقة أنيميشن النبض (Pulse Animation) */
-.pulse-wave {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  opacity: 0.7;
-  z-index: -1;
-  animation: floatingPulse 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.pulse-whatsapp {
-  background-color: #25d366;
-}
-
-.pulse-call {
-  background-color: #0284c7;
-}
-
-@keyframes floatingPulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.75;
-  }
-  70% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
-}
-
-/* تحسين المقاسات لشاشات الموبايل */
-@media (max-width: 580px) {
-  .floating-contact-actions {
-    bottom: 20px;
-    right: 20px;
-    gap: 12px;
-  }
-
-  .floating-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
-  }
-}
-
-    /* الفوتر */
+    /* ================================== footer ============================== */
     .main-footer {
       background: var(--dark-navy);
       color: #94a3b8;
@@ -596,7 +704,8 @@
       font-size: 13.5px;
     }
 
-    @media (max-width: 850px) {
+    /* ================= أكواد الميديا كويري وتجاوب الشاشات (Responsive Only) ================= */
+    @media (max-width: 992px) {
       .menu-btn {
         display: block;
       }
@@ -604,52 +713,187 @@
       .nav-links {
         position: fixed;
         top: 0;
-        right: -280px;
-        width: 260px;
+        right: -100%;
+        width: 280px;
         height: 100vh;
-        background-color: #ffffff;
+        background: #ffffff;
         flex-direction: column;
         align-items: flex-start;
-        padding: 85px 22px;
+        padding: 90px 24px 30px;
         gap: 12px;
-        box-shadow: -6px 0 20px rgba(0, 0, 0, 0.15);
-        transition: right 0.3s ease;
-        z-index: 1001;
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+        overflow-y: auto;
       }
 
       .nav-links.active {
         right: 0;
       }
 
-      .nav-links a:hover,
-      .nav-links a.active {
-        border-bottom: none;
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .nav-btn {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding-left: 15px;
+        display: none;
+      }
+
+      .dropdown-item.open .submenu,
+      .dropdown-item.active .submenu {
+        display: block;
+      }
+
+      .dropdown-item.open .arrow-icon {
+        transform: rotate(180deg);
+      }
+
+      .product-detail-section {
+        height: auto;
+        margin: 30px auto;
+      }
+
+      .product-grid-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
 
       .contact-main-grid {
         grid-template-columns: 1fr;
+        height: auto;
         gap: 35px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .btn-send-message {
+        margin: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        padding: 10px 0;
+      }
+
+      .top-info {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .form-two-cols {
         grid-template-columns: 1fr;
+        gap: 16px;
       }
 
-      .map-center-container {
-        height: 240px;
-        max-width: 100%;
+      .form-submit-row {
+        justify-content: stretch;
+      }
+
+      .btn-send-message {
+        width: 100%;
       }
 
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 25px;
       }
+
+      .top-bar-content {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .btn-send-message {
+        margin: 20px;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .nav-content {
+        height: 75px;
+      }
+
+      .brand-logo img {
+        height: 48px;
+      }
+
+      .product-main-title {
+        font-size: 24px;
+      }
+
+      .product-media-wrapper {
+        padding: 15px;
+      }
+
+      .product-media-wrapper img {
+        max-height: 300px;
+      }
+
+      .spec-card {
+        padding: 14px 16px;
+        gap: 12px;
+      }
+
+      .spec-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+      }
+
+      .product-quick-actions {
+        flex-direction: column;
+      }
+
+      .spec-action-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .toast-popup {
+        min-width: 290px;
+        padding: 12px 16px;
+      }
+
+      .top-bar-content {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .btn-send-message {
+        margin: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- الإشعار العائم الفخم للنجاح والخطأ -->
+  <!--=================== For the luxurious floating indicator of success and failure. ======================-->
   <div id="toastNotification" class="toast-popup" role="alert">
     <div class="toast-icon-wrap">
       <i id="toastIcon" class="fa-solid fa-check"></i>
@@ -665,9 +909,8 @@
   <aside class="top-bar">
     <div class="container top-bar-content">
       <div class="top-info">
-        <span><i class="fa-solid fa-location-dot"></i> <span data-tr="Gebze / Kocaeli, Türkiye" data-en="Gebze / Kocaeli, Turkey">Gebze / Kocaeli, Türkiye</span></span>
+        <span class="badge"><i class="fa-solid fa-envelope"></i><a href="mailto:barumalseyid@gmail.com">barumalseyid@gmail.com</a></span>
       </div>
-      
       <div class="lang-switch">
         <button class="lang-btn active" id="btn-tr" onclick="setLanguage('tr')">TR</button>
         <span>|</span>
@@ -691,23 +934,103 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
         <li><a href="index.html#hakkimizda" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
-        <li><a href="index.html#torba-tipleri" data-tr="Ürünlerimiz" data-en="Products">Ürünlerimiz</a></li>
-        <li><a href="iletisim.html" class="active" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+        
+        <!-- قائمة Ürünlerimiz المنسدلة (مفعلة هنا بالخط الأزرق) -->
+        <li class="dropdown-item active">
+          <div class="dropdown-toggle">
+            <span data-tr="Ürünlerimiz" data-en="Products">Ürünlerimiz</span>
+            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+          </div>
+          <ul class="submenu">
+            <li><a href="standart-4-kulplu-torba.html" class="active-sub" data-tr="Standart 4 Kulplu Torba" data-en="Standard 4-Loop Bag">Standart 4 Kulplu Torba</a></li>
+            <li><a href="q-bag.html" data-tr="Q-Bag Torba" data-en="Q-Bag (Baffle Bag)">Q-Bag Torba</a></li>
+            <li><a href="Ic-Naylonlu.html" data-tr="İç Naylonlu Big Bag" data-en="Liner Big Bag">İç Naylonlu Big Bag</a></li>
+            <li><a href="Capraz-Kulplu.html" data-tr="Çapraz Kulplu Big Bag" data-en="Cross-Corner Bag">Çapraz Kulplu Big Bag</a></li>
+            <li><a href="index.html#torba-tipleri" data-tr="Tüm Ürünleri Gör" data-en="View All Products">Tüm Ürünleri Gör</a></li>
+          </ul>
+        </li>
+
+        <li><a href="iletisim.html" data-tr="İletişim" data-en="Contact">İletişim</a></li>
         <li><a href="iletisim.html" class="nav-btn" data-tr="Fiyat Teklifi Al" data-en="Get a Quote">Fiyat Teklifi Al</a></li>
       </ul>
     </div>
   </header>
 
+  <!-- ================= (Standart 4 Kulplu Big Bag) ================= -->
+  <section class="product-detail-section">
+    
+    <div class="product-top-header">
+      <h1 class="product-main-title" data-tr="Standart 4 Kulplu Big Bag" data-en="Standard 4-Loop Big Bag">Çapraz Kulplu Big Bag</h1>
+    </div>
+
+    <div class="product-grid-container">
+
+      <div class="product-media-wrapper">
+        <img src="images/çapraz-kuplu-big-bag.png" alt="Standart 4 Kulplu Big Bag" onerror="this.src='https://placehold.co/600x550?text=Standart+4+Kulplu+Big+Bag'" />
+      </div>
+
+      <div class="product-specs-list">
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-cube"></i></div>
+          <div class="spec-body">
+            <h3 data-tr="Ürün Nedir?" data-en="What is the Product?">Ürün Nedir?</h3>
+            <p data-tr="Dört adet dayanıklı kaldırma kolonuna sahip, dökme malzemelerin güvenle depolanması ve taşınması için üretilen standart sanayi tipi ambalajdır." data-en="A standard industrial bulk bag equipped with 4 durable lifting loops, engineered for the safe storage and handling of dry bulk materials.">
+              Dört adet dayanıklı kaldırma kolonuna sahip, dökme malzemelerin güvenle depolanması ve taşınması için üretilen standart sanayi tipi ambalajdır.
+            </p>
+          </div>
+        </div>
+
+        <div class="spec-card highlight">
+          <div class="spec-icon"><i class="fa-solid fa-weight-hanging"></i></div>
+          <div class="spec-body">
+            <h3 data-tr="Taşıma Kapasitesi (SWL)" data-en="Load Capacity (SWL)">Taşıma Kapasitesi (SWL)</h3>
+            <p>
+              <strong data-tr="500 kg - 2000 kg" data-en="500 kg - 2000 kg">500 kg - 2000 kg</strong>
+              <span class="spec-note" data-tr="(Talebe ve ihtiyaca göre özel üretim)" data-en="(Customized according to requirements)">(Talebe ve ihtiyaca göre özel üretim)</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-industry"></i></div>
+          <div class="spec-body">
+            <h3 data-tr="Kullanım Alanları" data-en="Applications">Kullanım Alanları</h3>
+            <p data-tr="İnşaat malzemeleri, kum, çakıl, tarım ürünleri, tohum, tahıl, gübre ve kimyasal hammaddelerin güvenli taşınması ve istiflenmesi." data-en="Safe transportation and storage of construction materials, sand, gravel, agricultural crops, seeds, grains, fertilizers, and industrial chemicals.">
+              İnşaat malzemeleri, kum, çakıl, tarım ürünleri, tohum, tahıl, gübre ve kimyasal hammaddelerin güvenli taşınması ve istiflenmesi.
+            </p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="spec-body">
+            <h3 data-tr="Öne Çıkan Özellikler" data-en="Key Features">Öne Çıkan Özellikler</h3>
+            <ul class="spec-features-list">
+              <li data-tr="Yırtılma ve patlamaya dirençli yüksek mukavemetli Polipropilen (PP) dokuma kumaş" data-en="High-tensile, tear-resistant woven Polypropylene (PP) fabric">Yırtılma ve patlamaya dirençli yüksek mukavemetli Polipropilen (PP) dokuma kumaş</li>
+              <li data-tr="Güneş ışınlarına ve dış ortam şartlarına karşı UV katkılı koruma" data-en="UV-stabilized protection against sunlight and weather degradation">Güneş ışınlarına ve dış ortam şartlarına karşı UV katkılı koruma</li>
+              <li data-tr="Hızlı ve pratik doldurma - boşaltma bacası seçenekleri" data-en="Rapid filling and discharge spout options for easy handling">Hızlı ve pratik doldurma - boşaltma bacası seçenekleri</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-quick-actions">
+          <a href="https://wa.me/905313866620?text=Merhaba,%20Standart%204%20Kulplu%20Big%20Bag%20hakkında%20fiyat%20teklifi%20almak%20istiyorum." class="spec-action-btn wa-btn" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span data-tr="WhatsApp ile Fiyat Al" data-en="Get Quote on WhatsApp">WhatsApp ile Fiyat Al</span>
+          </a>
+          <a href="tel:+905313866620" class="spec-action-btn call-btn">
+            <i class="fa-solid fa-phone"></i>
+            <span data-tr="Hemen Ara" data-en="Call Directly">Hemen Ara</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <main class="contact-page-section">
     <div class="container">
-      
-      <div class="map-center-container">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48332.18131379569!2d29.39420658392182!3d40.80352528186259!2m3!1f0!2f0!3f0!3m2!1i1024!2f768!4f13.1!3m3!1m2!1s0x14cad01416eb9f33%3A0xb3e1855e9ea37397!2sGebze%2C%20Kocaeli!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" 
-          allowfullscreen="" 
-          loading="lazy">
-        </iframe>
-      </div>
 
       <div class="contact-main-grid">
         <div class="contact-info-block">
@@ -737,10 +1060,9 @@
         </div>
 
         <form class="contact-form-box" id="contactForm">
-          <!-- ضع مفتاحك من web3forms.com هنا -->
           <input type="hidden" name="access_key" value="889d83af-ef3d-4a01-9166-7c98dbb5849a" />
           <input type="hidden" name="from_name" value="ERDAŞ Web Sitesi İletişim Formu" />
-          <input type="hidden" name="subject" value="Yeni İletişim & Fiyat Teklifi Mesajı (ERDAŞ)" />
+          <input type="hidden" name="subject" value="Standart 4 Kulplu Big Bag - Yeni Teklif Talebi" />
           <input type="checkbox" name="botcheck" style="display: none;" />
 
           <div class="form-two-cols">
@@ -812,23 +1134,6 @@
     </div>
   </main>
 
-<!-- حاوية الأزرار العائمة (واتساب + اتصال) -->
-<div class="floating-contact-actions">
-  
-  <!-- زر الاتصال الهاتفي -->
-  <a href="tel:+905313866620" class="floating-btn btn-call" aria-label="Hemen Ara">
-    <div class="pulse-wave pulse-call"></div>
-    <i class="fa-solid fa-phone"></i>
-  </a>
-
-  <!-- زر الواتساب -->
-  <a href="https://wa.me/905313866620" class="floating-btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Destek">
-    <div class="pulse-wave pulse-whatsapp"></div>
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-
-</div>
-
   <footer class="main-footer">
     <div class="container footer-grid">
       <div>
@@ -859,16 +1164,26 @@
     </div>
   </footer>
 
-  <!-- ================= قسم الجافاسكريبت ================= -->
   <script>
     // 1. فتح وإغلاق قائمة الهاتف (النافبار)
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownItem = document.querySelector('.dropdown-item');
     
     if (menuBtn && navLinks) {
       menuBtn.addEventListener('click', () => {
         menuBtn.classList.toggle('open');
         navLinks.classList.toggle('active');
+      });
+    }
+
+    if (dropdownToggle && dropdownItem) {
+      dropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          dropdownItem.classList.toggle('open');
+        }
       });
     }
 
